@@ -1,0 +1,65 @@
+id = "run-wS5Hiyy6RZTF9xWK"
+created_at = "2023-02-01T10:16:58.578Z"
+message = "Triggered via UI"
+commit_sha = "dad919b7e0955401b86829fee64c1a88442c16d6"
+speculative = false
+is_destroy = false
+refresh = true
+refresh_only = false
+replace_addrs = null
+target_addrs = null
+
+variables = {
+	"AWS_ACCESS_KEY_ID": {
+		"category":  "env",
+		"sensitive": false,
+	},
+	"AWS_REGION": {
+		"category":  "env",
+		"sensitive": false,
+	},
+	"AWS_SECRET_ACCESS_KEY": {
+		"category":  "env",
+		"sensitive": true,
+	},
+	"instance_type": {
+		"category":  "terraform",
+		"sensitive": false,
+	},
+	"my_ip_with_cidr": {
+		"category":  "terraform",
+		"sensitive": false,
+	},
+	"public_key": {
+		"category":  "terraform",
+		"sensitive": false,
+	},
+	"server_name": {
+		"category":  "terraform",
+		"sensitive": false,
+	},
+	"vpc_id": {
+		"category":  "terraform",
+		"sensitive": false,
+	},
+}
+
+organization = {
+	"name": "Terraform-Exam-Prep-01",
+}
+
+workspace = {
+	"auto_apply":  false,
+	"created_at":  "2023-02-01T09:57:58.555Z",
+	"description": null,
+	"id":          "ws-XSFKd38arnLa1iRN",
+	"name":        "vcs-terraform",
+	"tags":        [],
+	"vcs_repo": {
+		"branch":             "",
+		"display_identifier": "abishop-Insight/vcs-terraform",
+		"identifier":         "abishop-Insight/vcs-terraform",
+		"ingress_submodules": false,
+	},
+	"working_directory": "",
+}

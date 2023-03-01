@@ -1,0 +1,314 @@
+import "strings"
+import "types"
+
+_modules = {
+	"root": {
+		"data": {},
+		"modules": {
+			"module-apache": {
+				"config": {},
+				"references": {
+					"instance_type": [
+						"var.instance_type",
+					],
+					"my_ip_with_cidr": [
+						"var.my_ip_with_cidr",
+					],
+					"public_key": [
+						"var.public_key",
+					],
+					"server_name": [
+						"var.server_name",
+					],
+					"vpc_id": [
+						"var.vpc_id",
+					],
+				},
+				"source":  "abishop-Insight/module-apache/aws",
+				"version": "1.0.0",
+			},
+		},
+		"outputs": {
+			"public_ip": {
+				"depends_on":  [],
+				"description": "",
+				"references": [
+					"module.module-apache.public_ip",
+					"module.module-apache",
+				],
+				"sensitive": false,
+				"value":     undefined,
+			},
+		},
+		"providers": {
+			"aws": {
+				"alias": {
+					"": {
+						"config": {
+							"region": "us-east-1",
+						},
+						"references": {
+							"region": [],
+						},
+						"version": "",
+					},
+				},
+				"config": {
+					"region": "us-east-1",
+				},
+				"references": {
+					"region": [],
+				},
+				"version": "",
+			},
+		},
+		"resources": {},
+		"variables": {
+			"instance_type": {
+				"default":     null,
+				"description": "",
+			},
+			"my_ip_with_cidr": {
+				"default":     null,
+				"description": "",
+			},
+			"public_key": {
+				"default":     null,
+				"description": "",
+			},
+			"server_name": {
+				"default":     null,
+				"description": "",
+			},
+			"vpc_id": {
+				"default":     null,
+				"description": "",
+			},
+		},
+	},
+
+	"module.module-apache": {
+		"data": {
+			"aws_ami": {
+				"amazon-linux-2": {
+					"config": {
+						"filter": [
+							{
+								"name": "owner-alias",
+								"values": [
+									"amazon",
+								],
+							},
+							{
+								"name": "name",
+								"values": [
+									"amzn2-ami-hvm*",
+								],
+							},
+						],
+						"most_recent": true,
+					},
+					"provisioners": null,
+					"references": {
+						"filter": [
+							{
+								"name":   [],
+								"values": [],
+							},
+							{
+								"name":   [],
+								"values": [],
+							},
+						],
+						"most_recent": [],
+					},
+				},
+			},
+			"aws_vpc": {
+				"default_vpc": {
+					"config":       {},
+					"provisioners": null,
+					"references": {
+						"id": [
+							"var.vpc_id",
+						],
+					},
+				},
+			},
+			"template_file": {
+				"user_data": {
+					"config":       {},
+					"provisioners": null,
+					"references": {
+						"template": [
+							"path.module",
+						],
+					},
+				},
+			},
+		},
+		"modules": {},
+		"outputs": {
+			"public_ip": {
+				"depends_on":  [],
+				"description": "",
+				"references": [
+					"aws_instance.alex_server1.public_ip",
+					"aws_instance.alex_server1",
+				],
+				"sensitive": false,
+				"value":     undefined,
+			},
+		},
+		"providers": {
+			"template": {
+				"alias": {
+					"": {
+						"config":     {},
+						"references": {},
+						"version":    "",
+					},
+				},
+				"config":     {},
+				"references": {},
+				"version":    "",
+			},
+		},
+		"resources": {
+			"aws_instance": {
+				"alex_server1": {
+					"config":       {},
+					"provisioners": null,
+					"references": {
+						"ami": [
+							"data.aws_ami.amazon-linux-2.id",
+							"data.aws_ami.amazon-linux-2",
+						],
+						"instance_type": [
+							"var.instance_type",
+						],
+						"key_name": [
+							"aws_key_pair.deployer.key_name",
+							"aws_key_pair.deployer",
+						],
+						"tags": [
+							"var.server_name",
+						],
+						"user_data": [
+							"data.template_file.user_data.rendered",
+							"data.template_file.user_data",
+						],
+						"vpc_security_group_ids": [
+							"aws_security_group.sg_alex_server.id",
+							"aws_security_group.sg_alex_server",
+						],
+					},
+				},
+			},
+			"aws_key_pair": {
+				"deployer": {
+					"config": {
+						"key_name": "deployer-key",
+					},
+					"provisioners": null,
+					"references": {
+						"key_name": [],
+						"public_key": [
+							"var.public_key",
+						],
+					},
+				},
+			},
+			"aws_security_group": {
+				"sg_alex_server": {
+					"config": {
+						"description": "Alex Server Security Group",
+						"egress": [
+							{
+								"cidr_blocks": [
+									"0.0.0.0/0",
+								],
+								"description":      null,
+								"from_port":        0,
+								"ipv6_cidr_blocks": null,
+								"prefix_list_ids":  null,
+								"protocol":         "-1",
+								"security_groups":  null,
+								"self":             null,
+								"to_port":          0,
+							},
+						],
+						"name": "sg_alex_server",
+					},
+					"provisioners": null,
+					"references": {
+						"description": [],
+						"egress":      [],
+						"ingress": [
+							"var.my_ip_with_cidr",
+						],
+						"name": [],
+						"vpc_id": [
+							"data.aws_vpc.default_vpc.id",
+							"data.aws_vpc.default_vpc",
+						],
+					},
+				},
+			},
+		},
+		"variables": {
+			"instance_type": {
+				"default":     "t2.mciro",
+				"description": "",
+			},
+			"my_ip_with_cidr": {
+				"default":     null,
+				"description": "Provide your IP e.g. 188.223.150.59/32",
+			},
+			"public_key": {
+				"default":     null,
+				"description": "",
+			},
+			"server_name": {
+				"default":     "Apache-Server",
+				"description": "",
+			},
+			"vpc_id": {
+				"default":     null,
+				"description": "",
+			},
+		},
+	},
+}
+
+module_paths = [
+	[],
+	[
+		"module-apache",
+	],
+]
+
+module = func(path) {
+	if types.type_of(path) is not "list" {
+		error("expected list, got", types.type_of(path))
+	}
+
+	if length(path) < 1 {
+		return _modules.root
+	}
+
+	addr = []
+	for path as p {
+		append(addr, "module")
+		append(addr, p)
+	}
+
+	return _modules[strings.join(addr, ".")]
+}
+
+data = _modules.root.data
+modules = _modules.root.modules
+providers = _modules.root.providers
+resources = _modules.root.resources
+variables = _modules.root.variables
+outputs = _modules.root.outputs

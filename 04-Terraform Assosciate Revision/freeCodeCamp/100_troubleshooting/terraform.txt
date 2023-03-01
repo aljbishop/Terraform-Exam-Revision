@@ -1,0 +1,835 @@
+2023-01-25T14:09:17.056Z [INFO]  Terraform version: 1.3.3
+2023-01-25T14:09:17.056Z [DEBUG] using github.com/hashicorp/go-tfe v1.9.0
+2023-01-25T14:09:17.056Z [DEBUG] using github.com/hashicorp/hcl/v2 v2.14.1
+2023-01-25T14:09:17.056Z [DEBUG] using github.com/hashicorp/terraform-config-inspect v0.0.0-20210209133302-4fd17a0faac2
+2023-01-25T14:09:17.057Z [DEBUG] using github.com/hashicorp/terraform-svchost v0.0.0-20200729002733-f050f53b9734
+2023-01-25T14:09:17.057Z [DEBUG] using github.com/zclconf/go-cty v1.11.1
+2023-01-25T14:09:17.057Z [INFO]  Go runtime version: go1.19.1
+2023-01-25T14:09:17.057Z [INFO]  CLI args: []string{"C:\\Terraform\\terraform.exe", "apply"}
+2023-01-25T14:09:17.067Z [TRACE] Stdout is a terminal of width 267
+2023-01-25T14:09:17.068Z [TRACE] Stderr is a terminal of width 267
+2023-01-25T14:09:17.068Z [TRACE] Stdin is a terminal
+2023-01-25T14:09:17.071Z [DEBUG] Attempting to open CLI config file: C:\Users\abishop1\AppData\Roaming\terraform.rc
+2023-01-25T14:09:17.071Z [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2023-01-25T14:09:17.072Z [INFO]  Loading CLI configuration from C:\Users\abishop1\AppData\Roaming\terraform.d\credentials.tfrc.json
+2023-01-25T14:09:17.072Z [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2023-01-25T14:09:17.072Z [DEBUG] ignoring non-existing provider search directory C:\Users\abishop1\AppData\Roaming\terraform.d\plugins
+2023-01-25T14:09:17.072Z [DEBUG] ignoring non-existing provider search directory C:\Users\abishop1\AppData\Roaming\HashiCorp\Terraform\plugins
+2023-01-25T14:09:17.073Z [INFO]  CLI command args: []string{"apply"}
+2023-01-25T14:09:17.075Z [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2023-01-25T14:09:17.075Z [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2023-01-25T14:09:17.075Z [DEBUG] New state was assigned lineage "0e59c937-bf72-9dda-1b47-b1b586b253d1"
+2023-01-25T14:09:17.075Z [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2023-01-25T14:09:17.075Z [TRACE] Meta.Backend: instantiated backend of type <nil>
+2023-01-25T14:09:17.076Z [TRACE] providercache.fillMetaCache: scanning directory .terraform\providers
+2023-01-25T14:09:17.078Z [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/hashicorp/aws v4.49.0 for windows_amd64 at .terraform\providers\registry.terraform.io\hashicorp\aws\4.49.0\windows_amd64
+2023-01-25T14:09:17.078Z [TRACE] providercache.fillMetaCache: including .terraform\providers\registry.terraform.io\hashicorp\aws\4.49.0\windows_amd64 as a candidate package for registry.terraform.io/hashicorp/aws 4.49.0
+2023-01-25T14:09:17.967Z [DEBUG] checking for provisioner in "."
+2023-01-25T14:09:17.967Z [DEBUG] checking for provisioner in "C:\\Terraform"
+2023-01-25T14:09:17.967Z [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2023-01-25T14:09:17.969Z [INFO]  backend/local: starting Apply operation
+2023-01-25T14:09:17.969Z [TRACE] backend/local: requesting state manager for workspace "default"
+2023-01-25T14:09:17.969Z [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2023-01-25T14:09:17.969Z [TRACE] backend/local: requesting state lock for workspace "default"
+2023-01-25T14:09:20.440Z [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2023-01-25T14:09:20.443Z [TRACE] statemgr.Filesystem: no previously-stored snapshot exists
+2023-01-25T14:09:20.443Z [TRACE] statemgr.Filesystem: locking terraform.tfstate using LockFileEx
+2023-01-25T14:09:20.443Z [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2023-01-25T14:09:20.449Z [TRACE] backend/local: reading remote state for workspace "default"
+2023-01-25T14:09:20.450Z [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2023-01-25T14:09:20.450Z [TRACE] statemgr.Filesystem: snapshot file has nil snapshot, but that's okay
+2023-01-25T14:09:20.450Z [TRACE] statemgr.Filesystem: read nil snapshot
+2023-01-25T14:09:20.450Z [TRACE] backend/local: populating backend.LocalRun for current working directory
+2023-01-25T14:09:20.459Z [TRACE] Config.VerifyDependencySelections: provider registry.terraform.io/hashicorp/aws has 4.49.0 to satisfy "4.49.0"
+2023-01-25T14:09:20.459Z [TRACE] terraform.NewContext: starting
+2023-01-25T14:09:20.459Z [TRACE] terraform.NewContext: complete
+2023-01-25T14:09:20.459Z [TRACE] backend/local: requesting interactive input, if necessary
+2023-01-25T14:09:20.459Z [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/hashicorp/aws"
+2023-01-25T14:09:20.459Z [TRACE] terraform.contextPlugins: Initializing provider "registry.terraform.io/hashicorp/aws" to read its schema
+2023-01-25T14:09:20.459Z [DEBUG] created provider logger: level=trace
+2023-01-25T14:09:20.460Z [INFO]  provider: configuring client automatic mTLS
+2023-01-25T14:09:20.482Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/4.49.0/windows_amd64/terraform-provider-aws_v4.49.0_x5.exe args=[.terraform/providers/registry.terraform.io/hashicorp/aws/4.49.0/windows_amd64/terraform-provider-aws_v4.49.0_x5.exe]
+2023-01-25T14:09:20.494Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/4.49.0/windows_amd64/terraform-provider-aws_v4.49.0_x5.exe pid=21996
+2023-01-25T14:09:20.494Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/4.49.0/windows_amd64/terraform-provider-aws_v4.49.0_x5.exe
+2023-01-25T14:09:20.755Z [INFO]  provider.terraform-provider-aws_v4.49.0_x5.exe: configuring server automatic mTLS: timestamp=2023-01-25T14:09:20.753Z
+2023-01-25T14:09:20.779Z [DEBUG] provider: using plugin: version=5
+2023-01-25T14:09:20.779Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: plugin address: address=127.0.0.1:10000 network=tcp timestamp=2023-01-25T14:09:20.779Z
+2023-01-25T14:09:20.796Z [TRACE] GRPCProvider: GetProviderSchema
+2023-01-25T14:09:20.796Z [TRACE] provider.stdio: waiting for stdio data
+2023-01-25T14:09:20.797Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Received request: tf_proto_version=5.3 tf_rpc=GetProviderSchema @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/tf5server/server.go:491 @module=sdk.proto tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=f712d60b-6161-f8e5-80b6-0ce6690646c5 timestamp=2023-01-25T14:09:20.797Z
+2023-01-25T14:09:20.797Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Sending request downstream: tf_rpc=GetProviderSchema @module=sdk.proto tf_proto_version=5.3 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=f712d60b-6161-f8e5-80b6-0ce6690646c5 @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/internal/tf5serverlogging/downstream_request.go:17 timestamp=2023-01-25T14:09:20.797Z
+2023-01-25T14:09:20.797Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: serving cached schema information: @caller=github.com/hashicorp/terraform-plugin-mux@v0.8.0/internal/logging/mux.go:16 @module=sdk.mux tf_rpc=GetProviderSchema timestamp=2023-01-25T14:09:20.797Z
+2023-01-25T14:09:20.797Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Received downstream response: diagnostic_warning_count=0 tf_proto_version=5.3 tf_rpc=GetProviderSchema @module=sdk.proto tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_duration_ms=0 tf_req_id=f712d60b-6161-f8e5-80b6-0ce6690646c5 @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/internal/tf5serverlogging/downstream_request.go:37 diagnostic_error_count=0 timestamp=2023-01-25T14:09:20.797Z
+2023-01-25T14:09:20.825Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Served request: tf_proto_version=5.3 tf_req_id=f712d60b-6161-f8e5-80b6-0ce6690646c5 tf_rpc=GetProviderSchema @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/tf5server/server.go:510 @module=sdk.proto tf_provider_addr=registry.terraform.io/hashicorp/aws timestamp=2023-01-25T14:09:20.825Z
+2023-01-25T14:09:21.070Z [TRACE] GRPCProvider: Close
+2023-01-25T14:09:21.071Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-01-25T14:09:21.103Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/4.49.0/windows_amd64/terraform-provider-aws_v4.49.0_x5.exe pid=21996
+2023-01-25T14:09:21.103Z [DEBUG] provider: plugin exited
+2023-01-25T14:09:21.103Z [TRACE] Context.Input: Prompting for provider arguments
+2023-01-25T14:09:21.103Z [TRACE] Context.Input: Provider provider.aws declared at main.tf:9,1-15
+2023-01-25T14:09:21.103Z [TRACE] Context.Input: Input for provider.aws: map[string]cty.Value{}
+2023-01-25T14:09:21.103Z [TRACE] backend/local: running validation operation
+2023-01-25T14:09:21.103Z [DEBUG] Building and walking validate graph
+2023-01-25T14:09:21.103Z [TRACE] building graph for walkValidate
+2023-01-25T14:09:21.103Z [TRACE] Executing graph transform *terraform.ConfigTransformer
+2023-01-25T14:09:21.103Z [TRACE] ConfigTransformer: Starting for path:
+2023-01-25T14:09:21.103Z [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  aws_instance.alex_server - *terraform.NodeValidatableResource
+  ------
+2023-01-25T14:09:21.103Z [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2023-01-25T14:09:21.103Z [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2023-01-25T14:09:21.103Z [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2023-01-25T14:09:21.103Z [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2023-01-25T14:09:21.103Z [TRACE] Executing graph transform *terraform.LocalTransformer
+2023-01-25T14:09:21.103Z [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2023-01-25T14:09:21.103Z [TRACE] Executing graph transform *terraform.OutputTransformer
+2023-01-25T14:09:21.103Z [TRACE] OutputTransformer: adding public_ip as *terraform.nodeExpandOutput
+2023-01-25T14:09:21.103Z [TRACE] Completed graph transform *terraform.OutputTransformer with new graph:
+  aws_instance.alex_server - *terraform.NodeValidatableResource
+  output.public_ip (expand) - *terraform.nodeExpandOutput
+  ------
+2023-01-25T14:09:21.103Z [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2023-01-25T14:09:21.103Z [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2023-01-25T14:09:21.103Z [TRACE] Executing graph transform *terraform.StateTransformer
+2023-01-25T14:09:21.103Z [TRACE] StateTransformer: pointless no-op call, creating no nodes at all
+2023-01-25T14:09:21.103Z [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2023-01-25T14:09:21.103Z [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2023-01-25T14:09:21.103Z [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2023-01-25T14:09:21.103Z [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2023-01-25T14:09:21.103Z [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2023-01-25T14:09:21.103Z [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2023-01-25T14:09:21.103Z [TRACE] AttachResourceConfigTransformer: attaching to "aws_instance.alex_server" (*terraform.NodeValidatableResource) config from main.tf:14,1-38
+2023-01-25T14:09:21.103Z [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_instance.alex_server
+2023-01-25T14:09:21.103Z [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2023-01-25T14:09:21.103Z [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2023-01-25T14:09:21.103Z [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2023-01-25T14:09:21.103Z [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/aws\"]" provider configuration from main.tf:9,1-15
+2023-01-25T14:09:21.103Z [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  aws_instance.alex_server - *terraform.NodeValidatableResource
+  output.public_ip (expand) - *terraform.nodeExpandOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2023-01-25T14:09:21.103Z [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2023-01-25T14:09:21.103Z [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2023-01-25T14:09:21.103Z [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2023-01-25T14:09:21.103Z [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_instance.alex_server
+2023-01-25T14:09:21.103Z [DEBUG] ProviderTransformer: "aws_instance.alex_server" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2023-01-25T14:09:21.103Z [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  aws_instance.alex_server - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.public_ip (expand) - *terraform.nodeExpandOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2023-01-25T14:09:21.103Z [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2023-01-25T14:09:21.103Z [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2023-01-25T14:09:21.103Z [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  aws_instance.alex_server - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.public_ip (expand) - *terraform.nodeExpandOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2023-01-25T14:09:21.103Z [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2023-01-25T14:09:21.103Z [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2023-01-25T14:09:21.103Z [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2023-01-25T14:09:21.103Z [TRACE] AttachSchemaTransformer: attaching resource schema to aws_instance.alex_server
+2023-01-25T14:09:21.103Z [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/aws"]
+2023-01-25T14:09:21.103Z [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2023-01-25T14:09:21.103Z [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2023-01-25T14:09:21.103Z [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2023-01-25T14:09:21.103Z [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2023-01-25T14:09:21.103Z [DEBUG] ReferenceTransformer: "aws_instance.alex_server" references: []
+2023-01-25T14:09:21.103Z [DEBUG] ReferenceTransformer: "output.public_ip (expand)" references: [aws_instance.alex_server]
+2023-01-25T14:09:21.104Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: []
+2023-01-25T14:09:21.104Z [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  aws_instance.alex_server - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.public_ip (expand) - *terraform.nodeExpandOutput
+    aws_instance.alex_server - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2023-01-25T14:09:21.104Z [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2023-01-25T14:09:21.104Z [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2023-01-25T14:09:21.104Z [TRACE] Executing graph transform *terraform.attachDataResourceDependsOnTransformer
+2023-01-25T14:09:21.104Z [TRACE] Completed graph transform *terraform.attachDataResourceDependsOnTransformer (no changes)
+2023-01-25T14:09:21.104Z [TRACE] Executing graph transform *terraform.DestroyEdgeTransformer
+2023-01-25T14:09:21.104Z [TRACE] Completed graph transform *terraform.DestroyEdgeTransformer (no changes)
+2023-01-25T14:09:21.104Z [TRACE] Executing graph transform *terraform.pruneUnusedNodesTransformer
+2023-01-25T14:09:21.104Z [TRACE] Completed graph transform *terraform.pruneUnusedNodesTransformer (no changes)
+2023-01-25T14:09:21.104Z [TRACE] Executing graph transform *terraform.TargetsTransformer
+2023-01-25T14:09:21.104Z [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2023-01-25T14:09:21.104Z [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2023-01-25T14:09:21.104Z [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2023-01-25T14:09:21.104Z [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2023-01-25T14:09:21.104Z [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  aws_instance.alex_server - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.public_ip (expand) - *terraform.nodeExpandOutput
+    aws_instance.alex_server - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.alex_server - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2023-01-25T14:09:21.104Z [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2023-01-25T14:09:21.104Z [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  aws_instance.alex_server - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.public_ip (expand) - *terraform.nodeExpandOutput
+    aws_instance.alex_server - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.alex_server - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    output.public_ip (expand) - *terraform.nodeExpandOutput
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2023-01-25T14:09:21.104Z [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2023-01-25T14:09:21.104Z [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  aws_instance.alex_server - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.public_ip (expand) - *terraform.nodeExpandOutput
+    aws_instance.alex_server - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.alex_server - *terraform.NodeValidatableResource
+  root - *terraform.nodeCloseModule
+    output.public_ip (expand) - *terraform.nodeExpandOutput
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2023-01-25T14:09:21.104Z [DEBUG] Starting graph walk: walkValidate
+2023-01-25T14:09:21.104Z [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": starting visit (*terraform.NodeApplyableProvider)
+2023-01-25T14:09:21.104Z [DEBUG] created provider logger: level=trace
+2023-01-25T14:09:21.104Z [INFO]  provider: configuring client automatic mTLS
+2023-01-25T14:09:21.112Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/4.49.0/windows_amd64/terraform-provider-aws_v4.49.0_x5.exe args=[.terraform/providers/registry.terraform.io/hashicorp/aws/4.49.0/windows_amd64/terraform-provider-aws_v4.49.0_x5.exe]
+2023-01-25T14:09:21.121Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/4.49.0/windows_amd64/terraform-provider-aws_v4.49.0_x5.exe pid=26608
+2023-01-25T14:09:21.121Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/4.49.0/windows_amd64/terraform-provider-aws_v4.49.0_x5.exe
+2023-01-25T14:09:21.308Z [INFO]  provider.terraform-provider-aws_v4.49.0_x5.exe: configuring server automatic mTLS: timestamp=2023-01-25T14:09:21.308Z
+2023-01-25T14:09:21.327Z [DEBUG] provider: using plugin: version=5
+2023-01-25T14:09:21.327Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: plugin address: address=127.0.0.1:10000 network=tcp timestamp=2023-01-25T14:09:21.327Z
+2023-01-25T14:09:21.339Z [TRACE] provider.stdio: waiting for stdio data
+2023-01-25T14:09:21.339Z [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/aws\"]" provider for provider["registry.terraform.io/hashicorp/aws"]
+2023-01-25T14:09:21.339Z [TRACE] NodeApplyableProvider: validating configuration for provider["registry.terraform.io/hashicorp/aws"]
+2023-01-25T14:09:21.339Z [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/aws"]: using explicit config only
+2023-01-25T14:09:21.339Z [TRACE] GRPCProvider: GetProviderSchema
+2023-01-25T14:09:21.339Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Received request: tf_proto_version=5.3 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=GetProviderSchema @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/tf5server/server.go:491 @module=sdk.proto tf_req_id=da0b59d9-cf1e-af86-247a-fe02860b4941 timestamp=2023-01-25T14:09:21.339Z
+2023-01-25T14:09:21.339Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Sending request downstream: @module=sdk.proto tf_proto_version=5.3 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=GetProviderSchema @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/internal/tf5serverlogging/downstream_request.go:17 tf_req_id=da0b59d9-cf1e-af86-247a-fe02860b4941 timestamp=2023-01-25T14:09:21.339Z
+2023-01-25T14:09:21.339Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: serving cached schema information: @module=sdk.mux tf_rpc=GetProviderSchema @caller=github.com/hashicorp/terraform-plugin-mux@v0.8.0/internal/logging/mux.go:16 timestamp=2023-01-25T14:09:21.339Z
+2023-01-25T14:09:21.340Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Received downstream response: diagnostic_error_count=0 tf_proto_version=5.3 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_duration_ms=0 @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/internal/tf5serverlogging/downstream_request.go:37 tf_req_id=da0b59d9-cf1e-af86-247a-fe02860b4941 diagnostic_warning_count=0 tf_rpc=GetProviderSchema @module=sdk.proto timestamp=2023-01-25T14:09:21.339Z
+2023-01-25T14:09:21.354Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Served request: tf_req_id=da0b59d9-cf1e-af86-247a-fe02860b4941 tf_proto_version=5.3 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=GetProviderSchema @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/tf5server/server.go:510 @module=sdk.proto timestamp=2023-01-25T14:09:21.354Z
+2023-01-25T14:09:21.474Z [TRACE] GRPCProvider: ValidateProviderConfig
+2023-01-25T14:09:21.475Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Received request: tf_req_id=e1594222-be07-feb0-c994-c34f01495454 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/tf5server/server.go:518 @module=sdk.proto tf_proto_version=5.3 timestamp=2023-01-25T14:09:21.475Z
+2023-01-25T14:09:21.475Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Skipping protocol data file writing because no data directory is set. Use the TF_LOG_SDK_PROTO_DATA_DIR environment variable to enable this functionality.: @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/internal/logging/protocol_data.go:38 tf_req_id=e1594222-be07-feb0-c994-c34f01495454 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=PrepareProviderConfig @module=sdk.proto tf_proto_version=5.3 timestamp=2023-01-25T14:09:21.475Z
+2023-01-25T14:09:21.475Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Sending request downstream: tf_req_id=e1594222-be07-feb0-c994-c34f01495454 tf_rpc=PrepareProviderConfig @module=sdk.proto tf_proto_version=5.3 tf_provider_addr=registry.terraform.io/hashicorp/aws @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/internal/tf5serverlogging/downstream_request.go:17 timestamp=2023-01-25T14:09:21.475Z
+2023-01-25T14:09:21.475Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: calling downstream server: @module=sdk.mux tf_mux_provider=*schema.GRPCProviderServer tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-mux@v0.8.0/internal/logging/mux.go:16 timestamp=2023-01-25T14:09:21.475Z
+2023-01-25T14:09:21.475Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Preparing provider configuration: tf_mux_provider=*schema.GRPCProviderServer tf_req_id=e1594222-be07-feb0-c994-c34f01495454 @caller=github.com/hashicorp/terraform-plugin-sdk/v2@v2.24.1/helper/schema/grpc_provider.go:128 @module=sdk.helper_schema tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=PrepareProviderConfig timestamp=2023-01-25T14:09:21.475Z
+2023-01-25T14:09:21.475Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling downstream: tf_mux_provider=*schema.GRPCProviderServer tf_req_id=e1594222-be07-feb0-c994-c34f01495454 tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-sdk/v2@v2.24.1/helper/schema/grpc_provider.go:216 tf_provider_addr=registry.terraform.io/hashicorp/aws @module=sdk.helper_schema timestamp=2023-01-25T14:09:21.475Z
+2023-01-25T14:09:21.498Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Called downstream: @module=sdk.helper_schema tf_mux_provider=*schema.GRPCProviderServer tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=e1594222-be07-feb0-c994-c34f01495454 tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-sdk/v2@v2.24.1/helper/schema/grpc_provider.go:218 timestamp=2023-01-25T14:09:21.497Z
+2023-01-25T14:09:21.498Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: calling downstream server: tf_mux_provider=*proto5server.Server tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-mux@v0.8.0/internal/logging/mux.go:16 @module=sdk.mux timestamp=2023-01-25T14:09:21.498Z
+2023-01-25T14:09:21.498Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Checking ProviderSchema lock: @module=sdk.framework tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=e1594222-be07-feb0-c994-c34f01495454 tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwserver/server.go:261 timestamp=2023-01-25T14:09:21.498Z
+2023-01-25T14:09:21.498Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Type implements TypeWithValidate: tf_req_id=e1594222-be07-feb0-c994-c34f01495454 @module=sdk.framework tf_mux_provider=*proto5server.Server tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:77 tf_attribute_path=shared_config_files tf_provider_addr=registry.terraform.io/hashicorp/aws timestamp=2023-01-25T14:09:21.498Z
+2023-01-25T14:09:21.498Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling provider defined Type Validate: tf_provider_addr=registry.terraform.io/hashicorp/aws @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:78 tf_attribute_path=shared_config_files @module=sdk.framework tf_mux_provider=*proto5server.Server tf_req_id=e1594222-be07-feb0-c994-c34f01495454 tf_rpc=PrepareProviderConfig timestamp=2023-01-25T14:09:21.498Z
+2023-01-25T14:09:21.498Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Called provider defined Type Validate: tf_mux_provider=*proto5server.Server tf_attribute_path=shared_config_files tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=e1594222-be07-feb0-c994-c34f01495454 tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:80 @module=sdk.framework timestamp=2023-01-25T14:09:21.498Z
+2023-01-25T14:09:21.498Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Type implements TypeWithValidate: tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=PrepareProviderConfig tf_attribute_path=allowed_account_ids @module=sdk.framework tf_mux_provider=*proto5server.Server tf_req_id=e1594222-be07-feb0-c994-c34f01495454 @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:77 timestamp=2023-01-25T14:09:21.498Z
+2023-01-25T14:09:21.498Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling provider defined Type Validate: @module=sdk.framework tf_attribute_path=allowed_account_ids tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:78 tf_mux_provider=*proto5server.Server tf_req_id=e1594222-be07-feb0-c994-c34f01495454 timestamp=2023-01-25T14:09:21.498Z
+2023-01-25T14:09:21.498Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Called provider defined Type Validate: tf_req_id=e1594222-be07-feb0-c994-c34f01495454 tf_provider_addr=registry.terraform.io/hashicorp/aws @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:80 @module=sdk.framework tf_attribute_path=allowed_account_ids tf_mux_provider=*proto5server.Server tf_rpc=PrepareProviderConfig timestamp=2023-01-25T14:09:21.498Z
+2023-01-25T14:09:21.498Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Type implements TypeWithValidate: @module=sdk.framework tf_attribute_path=forbidden_account_ids tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=e1594222-be07-feb0-c994-c34f01495454 tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:77 timestamp=2023-01-25T14:09:21.498Z
+2023-01-25T14:09:21.498Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling provider defined Type Validate: @module=sdk.framework tf_attribute_path=forbidden_account_ids tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=e1594222-be07-feb0-c994-c34f01495454 tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:78 timestamp=2023-01-25T14:09:21.498Z
+2023-01-25T14:09:21.499Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Called provider defined Type Validate: tf_attribute_path=forbidden_account_ids tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:80 @module=sdk.framework tf_req_id=e1594222-be07-feb0-c994-c34f01495454 tf_rpc=PrepareProviderConfig timestamp=2023-01-25T14:09:21.498Z
+2023-01-25T14:09:21.499Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Type implements TypeWithValidate: tf_attribute_path=shared_credentials_files tf_mux_provider=*proto5server.Server tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:77 @module=sdk.framework tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=e1594222-be07-feb0-c994-c34f01495454 timestamp=2023-01-25T14:09:21.498Z
+2023-01-25T14:09:21.499Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling provider defined Type Validate: tf_attribute_path=shared_credentials_files tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:78 @module=sdk.framework tf_req_id=e1594222-be07-feb0-c994-c34f01495454 timestamp=2023-01-25T14:09:21.498Z
+2023-01-25T14:09:21.499Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Called provider defined Type Validate: tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=PrepareProviderConfig @module=sdk.framework tf_mux_provider=*proto5server.Server tf_req_id=e1594222-be07-feb0-c994-c34f01495454 @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:80 tf_attribute_path=shared_credentials_files timestamp=2023-01-25T14:09:21.498Z
+2023-01-25T14:09:21.499Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Type implements TypeWithValidate: @module=sdk.framework tf_req_id=e1594222-be07-feb0-c994-c34f01495454 tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:77 tf_attribute_path=max_retries tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws timestamp=2023-01-25T14:09:21.499Z
+2023-01-25T14:09:21.499Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling provider defined Type Validate: tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:78 @module=sdk.framework tf_req_id=e1594222-be07-feb0-c994-c34f01495454 tf_attribute_path=max_retries tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws timestamp=2023-01-25T14:09:21.499Z
+2023-01-25T14:09:21.499Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Called provider defined Type Validate: tf_attribute_path=max_retries tf_provider_addr=registry.terraform.io/hashicorp/aws @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:80 @module=sdk.framework tf_mux_provider=*proto5server.Server tf_req_id=e1594222-be07-feb0-c994-c34f01495454 tf_rpc=PrepareProviderConfig timestamp=2023-01-25T14:09:21.499Z
+2023-01-25T14:09:21.499Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Type implements TypeWithValidate: tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:77 @module=sdk.framework tf_attribute_path=s3_force_path_style tf_req_id=e1594222-be07-feb0-c994-c34f01495454 timestamp=2023-01-25T14:09:21.499Z
+2023-01-25T14:09:21.499Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling provider defined Type Validate: tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:78 @module=sdk.framework tf_attribute_path=s3_force_path_style tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=e1594222-be07-feb0-c994-c34f01495454 timestamp=2023-01-25T14:09:21.499Z
+2023-01-25T14:09:21.499Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Called provider defined Type Validate: tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:80 @module=sdk.framework tf_attribute_path=s3_force_path_style tf_req_id=e1594222-be07-feb0-c994-c34f01495454 tf_rpc=PrepareProviderConfig timestamp=2023-01-25T14:09:21.499Z
+2023-01-25T14:09:21.499Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Type implements TypeWithValidate: @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:77 tf_attribute_path=s3_force_path_style tf_req_id=e1594222-be07-feb0-c994-c34f01495454 @module=sdk.framework tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=PrepareProviderConfig timestamp=2023-01-25T14:09:21.499Z
+2023-01-25T14:09:21.499Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling provider defined Type Validate: @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:78 tf_attribute_path=s3_force_path_style tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=e1594222-be07-feb0-c994-c34f01495454 tf_rpc=PrepareProviderConfig @module=sdk.framework timestamp=2023-01-25T14:09:21.499Z
+2023-01-25T14:09:21.499Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Called provider defined Type Validate: tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=e1594222-be07-feb0-c994-c34f01495454 tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:80 @module=sdk.framework tf_attribute_path=s3_force_path_style timestamp=2023-01-25T14:09:21.499Z
+2023-01-25T14:09:21.499Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling provider defined validator.List: tf_attribute_path=s3_force_path_style tf_mux_provider=*proto5server.Server tf_req_id=e1594222-be07-feb0-c994-c34f01495454 tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwserver/block_validation.go:214 @module=sdk.framework description="list must contain at most 1 elements" tf_provider_addr=registry.terraform.io/hashicorp/aws timestamp=2023-01-25T14:09:21.499Z
+2023-01-25T14:09:21.499Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Called provider defined validator.List: description="list must contain at most 1 elements" tf_attribute_path=s3_force_path_style tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=e1594222-be07-feb0-c994-c34f01495454 @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwserver/block_validation.go:224 @module=sdk.framework tf_rpc=PrepareProviderConfig timestamp=2023-01-25T14:09:21.499Z
+2023-01-25T14:09:21.499Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Type implements TypeWithValidate: tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=e1594222-be07-feb0-c994-c34f01495454 @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:77 tf_attribute_path=s3_force_path_style tf_mux_provider=*proto5server.Server @module=sdk.framework tf_rpc=PrepareProviderConfig timestamp=2023-01-25T14:09:21.499Z
+2023-01-25T14:09:21.499Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling provider defined Type Validate: @module=sdk.framework tf_attribute_path=s3_force_path_style tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:78 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=e1594222-be07-feb0-c994-c34f01495454 tf_mux_provider=*proto5server.Server timestamp=2023-01-25T14:09:21.499Z
+2023-01-25T14:09:21.499Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Called provider defined Type Validate: @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:80 tf_attribute_path=s3_force_path_style tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=e1594222-be07-feb0-c994-c34f01495454 tf_rpc=PrepareProviderConfig @module=sdk.framework tf_mux_provider=*proto5server.Server timestamp=2023-01-25T14:09:21.499Z
+2023-01-25T14:09:21.499Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling provider defined validator.List: tf_rpc=PrepareProviderConfig tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=e1594222-be07-feb0-c994-c34f01495454 description="list must contain at most 1 elements" tf_attribute_path=s3_force_path_style @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwserver/block_validation.go:214 @module=sdk.framework timestamp=2023-01-25T14:09:21.499Z
+2023-01-25T14:09:21.499Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Called provider defined validator.List: tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=e1594222-be07-feb0-c994-c34f01495454 @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwserver/block_validation.go:224 description="list must contain at most 1 elements" tf_attribute_path=s3_force_path_style @module=sdk.framework tf_rpc=PrepareProviderConfig timestamp=2023-01-25T14:09:21.499Z
+2023-01-25T14:09:21.499Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Type implements TypeWithValidate: tf_mux_provider=*proto5server.Server tf_req_id=e1594222-be07-feb0-c994-c34f01495454 tf_rpc=PrepareProviderConfig tf_attribute_path=s3_force_path_style tf_provider_addr=registry.terraform.io/hashicorp/aws @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:77 @module=sdk.framework timestamp=2023-01-25T14:09:21.499Z
+2023-01-25T14:09:21.499Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling provider defined Type Validate: @module=sdk.framework tf_attribute_path=s3_force_path_style tf_mux_provider=*proto5server.Server tf_req_id=e1594222-be07-feb0-c994-c34f01495454 @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:78 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=PrepareProviderConfig timestamp=2023-01-25T14:09:21.499Z
+2023-01-25T14:09:21.499Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Called provider defined Type Validate: @module=sdk.framework tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=e1594222-be07-feb0-c994-c34f01495454 tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:80 tf_attribute_path=s3_force_path_style timestamp=2023-01-25T14:09:21.499Z
+2023-01-25T14:09:21.499Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling provider defined validator.List: @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwserver/block_validation.go:214 @module=sdk.framework description="list must contain at most 1 elements" tf_attribute_path=s3_force_path_style tf_req_id=e1594222-be07-feb0-c994-c34f01495454 tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=PrepareProviderConfig timestamp=2023-01-25T14:09:21.499Z
+2023-01-25T14:09:21.499Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Called provider defined validator.List: @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwserver/block_validation.go:224 @module=sdk.framework tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=PrepareProviderConfig description="list must contain at most 1 elements" tf_attribute_path=s3_force_path_style tf_req_id=e1594222-be07-feb0-c994-c34f01495454 timestamp=2023-01-25T14:09:21.499Z
+2023-01-25T14:09:21.499Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Type implements TypeWithValidate: tf_req_id=e1594222-be07-feb0-c994-c34f01495454 @module=sdk.framework tf_attribute_path=s3_force_path_style tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:77 timestamp=2023-01-25T14:09:21.499Z
+2023-01-25T14:09:21.499Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling provider defined Type Validate: @module=sdk.framework tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=e1594222-be07-feb0-c994-c34f01495454 @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:78 tf_attribute_path=s3_force_path_style tf_rpc=PrepareProviderConfig timestamp=2023-01-25T14:09:21.499Z
+2023-01-25T14:09:21.499Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Called provider defined Type Validate: @module=sdk.framework tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=e1594222-be07-feb0-c994-c34f01495454 tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:80 tf_attribute_path=s3_force_path_style timestamp=2023-01-25T14:09:21.499Z
+2023-01-25T14:09:21.499Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling provider defined validator.List: tf_attribute_path=s3_force_path_style tf_mux_provider=*proto5server.Server @module=sdk.framework description="list must contain at most 1 elements" tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=e1594222-be07-feb0-c994-c34f01495454 tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwserver/block_validation.go:214 timestamp=2023-01-25T14:09:21.499Z
+2023-01-25T14:09:21.499Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Called provider defined validator.List: @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwserver/block_validation.go:224 description="list must contain at most 1 elements" tf_attribute_path=s3_force_path_style tf_provider_addr=registry.terraform.io/hashicorp/aws @module=sdk.framework tf_mux_provider=*proto5server.Server tf_req_id=e1594222-be07-feb0-c994-c34f01495454 tf_rpc=PrepareProviderConfig timestamp=2023-01-25T14:09:21.499Z
+2023-01-25T14:09:21.500Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Received downstream response: tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/internal/tf5serverlogging/downstream_request.go:37 diagnostic_error_count=0 diagnostic_warning_count=0 tf_proto_version=5.3 tf_provider_addr=registry.terraform.io/hashicorp/aws @module=sdk.proto tf_req_duration_ms=25 tf_req_id=e1594222-be07-feb0-c994-c34f01495454 timestamp=2023-01-25T14:09:21.500Z
+2023-01-25T14:09:21.500Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Served request: @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/tf5server/server.go:539 tf_proto_version=5.3 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=e1594222-be07-feb0-c994-c34f01495454 @module=sdk.proto tf_rpc=PrepareProviderConfig timestamp=2023-01-25T14:09:21.500Z
+2023-01-25T14:09:21.500Z [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": visit complete
+2023-01-25T14:09:21.500Z [TRACE] vertex "aws_instance.alex_server": starting visit (*terraform.NodeValidatableResource)
+2023-01-25T14:09:21.501Z [TRACE] GRPCProvider: ValidateResourceConfig
+2023-01-25T14:09:21.501Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Received request: tf_req_id=75a35a6f-adee-a780-d3c0-273071d4eb36 tf_resource_type=aws_instance tf_rpc=ValidateResourceTypeConfig tf_proto_version=5.3 tf_provider_addr=registry.terraform.io/hashicorp/aws @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/tf5server/server.go:679 @module=sdk.proto timestamp=2023-01-25T14:09:21.501Z
+2023-01-25T14:09:21.501Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Sending request downstream: tf_resource_type=aws_instance @module=sdk.proto tf_proto_version=5.3 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=75a35a6f-adee-a780-d3c0-273071d4eb36 tf_rpc=ValidateResourceTypeConfig @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/internal/tf5serverlogging/downstream_request.go:17 timestamp=2023-01-25T14:09:21.501Z
+2023-01-25T14:09:21.501Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: calling downstream server: tf_mux_provider=*schema.GRPCProviderServer tf_rpc=ValidateResourceTypeConfig @caller=github.com/hashicorp/terraform-plugin-mux@v0.8.0/internal/logging/mux.go:16 @module=sdk.mux timestamp=2023-01-25T14:09:21.501Z
+2023-01-25T14:09:21.501Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling downstream: tf_req_id=75a35a6f-adee-a780-d3c0-273071d4eb36 @module=sdk.helper_schema tf_mux_provider=*schema.GRPCProviderServer tf_provider_addr=registry.terraform.io/hashicorp/aws tf_resource_type=aws_instance tf_rpc=ValidateResourceTypeConfig @caller=github.com/hashicorp/terraform-plugin-sdk/v2@v2.24.1/helper/schema/grpc_provider.go:245 timestamp=2023-01-25T14:09:21.501Z
+2023-01-25T14:09:21.501Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Called downstream: @caller=github.com/hashicorp/terraform-plugin-sdk/v2@v2.24.1/helper/schema/grpc_provider.go:247 tf_rpc=ValidateResourceTypeConfig tf_resource_type=aws_instance @module=sdk.helper_schema tf_mux_provider=*schema.GRPCProviderServer tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=75a35a6f-adee-a780-d3c0-273071d4eb36 timestamp=2023-01-25T14:09:21.501Z
+2023-01-25T14:09:21.501Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Received downstream response: @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/internal/tf5serverlogging/downstream_request.go:37 @module=sdk.proto diagnostic_error_count=0 diagnostic_warning_count=0 tf_req_duration_ms=0 tf_req_id=75a35a6f-adee-a780-d3c0-273071d4eb36 tf_resource_type=aws_instance tf_rpc=ValidateResourceTypeConfig tf_proto_version=5.3 tf_provider_addr=registry.terraform.io/hashicorp/aws timestamp=2023-01-25T14:09:21.501Z
+2023-01-25T14:09:21.501Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Served request: @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/tf5server/server.go:699 tf_proto_version=5.3 tf_req_id=75a35a6f-adee-a780-d3c0-273071d4eb36 @module=sdk.proto tf_provider_addr=registry.terraform.io/hashicorp/aws tf_resource_type=aws_instance tf_rpc=ValidateResourceTypeConfig timestamp=2023-01-25T14:09:21.501Z
+2023-01-25T14:09:21.502Z [TRACE] vertex "aws_instance.alex_server": visit complete
+2023-01-25T14:09:21.502Z [TRACE] vertex "output.public_ip (expand)": starting visit (*terraform.nodeExpandOutput)
+2023-01-25T14:09:21.502Z [TRACE] vertex "output.public_ip (expand)": expanding dynamic subgraph
+2023-01-25T14:09:21.502Z [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2023-01-25T14:09:21.502Z [TRACE] GRPCProvider: Close
+2023-01-25T14:09:21.502Z [TRACE] Expanding output: adding output.public_ip as *terraform.NodeApplyableOutput
+2023-01-25T14:09:21.502Z [TRACE] vertex "output.public_ip (expand)": entering dynamic subgraph
+2023-01-25T14:09:21.502Z [TRACE] vertex "output.public_ip": starting visit (*terraform.NodeApplyableOutput)
+2023-01-25T14:09:21.502Z [TRACE] setValue: Saving Create change for output.public_ip in changeset
+2023-01-25T14:09:21.502Z [TRACE] setValue: Removing output.public_ip from state (it is now null)
+2023-01-25T14:09:21.502Z [TRACE] vertex "output.public_ip": visit complete
+2023-01-25T14:09:21.502Z [TRACE] vertex "output.public_ip (expand)": dynamic subgraph completed successfully
+2023-01-25T14:09:21.502Z [TRACE] vertex "output.public_ip (expand)": visit complete
+2023-01-25T14:09:21.502Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-01-25T14:09:21.535Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/4.49.0/windows_amd64/terraform-provider-aws_v4.49.0_x5.exe pid=26608
+2023-01-25T14:09:21.535Z [DEBUG] provider: plugin exited
+2023-01-25T14:09:21.535Z [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": visit complete
+2023-01-25T14:09:21.535Z [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2023-01-25T14:09:21.535Z [TRACE] vertex "root": visit complete
+2023-01-25T14:09:21.535Z [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/hashicorp/aws"
+2023-01-25T14:09:21.535Z [INFO]  backend/local: apply calling Plan
+2023-01-25T14:09:21.535Z [DEBUG] Building and walking plan graph for NormalMode
+2023-01-25T14:09:21.535Z [TRACE] building graph for walkPlan
+2023-01-25T14:09:21.535Z [TRACE] Executing graph transform *terraform.ConfigTransformer
+2023-01-25T14:09:21.535Z [TRACE] ConfigTransformer: Starting for path:
+2023-01-25T14:09:21.535Z [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  aws_instance.alex_server (expand) - *terraform.nodeExpandPlannableResource
+  ------
+2023-01-25T14:09:21.535Z [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2023-01-25T14:09:21.535Z [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2023-01-25T14:09:21.535Z [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2023-01-25T14:09:21.535Z [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2023-01-25T14:09:21.535Z [TRACE] Executing graph transform *terraform.LocalTransformer
+2023-01-25T14:09:21.535Z [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2023-01-25T14:09:21.535Z [TRACE] Executing graph transform *terraform.OutputTransformer
+2023-01-25T14:09:21.535Z [TRACE] OutputTransformer: adding public_ip as *terraform.nodeExpandOutput
+2023-01-25T14:09:21.535Z [TRACE] Completed graph transform *terraform.OutputTransformer with new graph:
+  aws_instance.alex_server (expand) - *terraform.nodeExpandPlannableResource
+  output.public_ip (expand) - *terraform.nodeExpandOutput
+  ------
+2023-01-25T14:09:21.535Z [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2023-01-25T14:09:21.535Z [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2023-01-25T14:09:21.535Z [TRACE] Executing graph transform *terraform.StateTransformer
+2023-01-25T14:09:21.535Z [TRACE] StateTransformer: creating nodes for deposed instance objects only
+2023-01-25T14:09:21.535Z [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2023-01-25T14:09:21.535Z [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2023-01-25T14:09:21.535Z [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2023-01-25T14:09:21.535Z [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2023-01-25T14:09:21.535Z [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2023-01-25T14:09:21.535Z [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2023-01-25T14:09:21.535Z [TRACE] AttachResourceConfigTransformer: attaching to "aws_instance.alex_server (expand)" (*terraform.nodeExpandPlannableResource) config from main.tf:14,1-38
+2023-01-25T14:09:21.535Z [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_instance.alex_server (expand)
+2023-01-25T14:09:21.535Z [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2023-01-25T14:09:21.535Z [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2023-01-25T14:09:21.535Z [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2023-01-25T14:09:21.535Z [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/aws\"]" provider configuration from main.tf:9,1-15
+2023-01-25T14:09:21.535Z [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  aws_instance.alex_server (expand) - *terraform.nodeExpandPlannableResource
+  output.public_ip (expand) - *terraform.nodeExpandOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2023-01-25T14:09:21.535Z [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2023-01-25T14:09:21.535Z [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2023-01-25T14:09:21.535Z [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2023-01-25T14:09:21.535Z [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_instance.alex_server (expand)
+2023-01-25T14:09:21.535Z [DEBUG] ProviderTransformer: "aws_instance.alex_server (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2023-01-25T14:09:21.535Z [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  aws_instance.alex_server (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.public_ip (expand) - *terraform.nodeExpandOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2023-01-25T14:09:21.535Z [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2023-01-25T14:09:21.535Z [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2023-01-25T14:09:21.535Z [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  aws_instance.alex_server (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.public_ip (expand) - *terraform.nodeExpandOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2023-01-25T14:09:21.535Z [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2023-01-25T14:09:21.535Z [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2023-01-25T14:09:21.535Z [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2023-01-25T14:09:21.535Z [TRACE] AttachSchemaTransformer: attaching resource schema to aws_instance.alex_server (expand)
+2023-01-25T14:09:21.535Z [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/aws"]
+2023-01-25T14:09:21.535Z [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2023-01-25T14:09:21.535Z [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2023-01-25T14:09:21.535Z [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2023-01-25T14:09:21.535Z [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2023-01-25T14:09:21.535Z [DEBUG] ReferenceTransformer: "aws_instance.alex_server (expand)" references: []
+2023-01-25T14:09:21.535Z [DEBUG] ReferenceTransformer: "output.public_ip (expand)" references: [aws_instance.alex_server (expand)]
+2023-01-25T14:09:21.535Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: []
+2023-01-25T14:09:21.535Z [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  aws_instance.alex_server (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.public_ip (expand) - *terraform.nodeExpandOutput
+    aws_instance.alex_server (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2023-01-25T14:09:21.535Z [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2023-01-25T14:09:21.535Z [TRACE] AttachDependenciesTransformer: aws_instance.alex_server depends on []
+2023-01-25T14:09:21.536Z [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2023-01-25T14:09:21.536Z [TRACE] Executing graph transform *terraform.attachDataResourceDependsOnTransformer
+2023-01-25T14:09:21.536Z [TRACE] Completed graph transform *terraform.attachDataResourceDependsOnTransformer (no changes)
+2023-01-25T14:09:21.536Z [TRACE] Executing graph transform *terraform.DestroyEdgeTransformer
+2023-01-25T14:09:21.536Z [TRACE] Completed graph transform *terraform.DestroyEdgeTransformer (no changes)
+2023-01-25T14:09:21.536Z [TRACE] Executing graph transform *terraform.pruneUnusedNodesTransformer
+2023-01-25T14:09:21.536Z [TRACE] Completed graph transform *terraform.pruneUnusedNodesTransformer (no changes)
+2023-01-25T14:09:21.536Z [TRACE] Executing graph transform *terraform.TargetsTransformer
+2023-01-25T14:09:21.536Z [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2023-01-25T14:09:21.536Z [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2023-01-25T14:09:21.536Z [TRACE] ForcedCBDTransformer: "aws_instance.alex_server (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2023-01-25T14:09:21.536Z [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2023-01-25T14:09:21.536Z [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2023-01-25T14:09:21.536Z [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  aws_instance.alex_server (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.public_ip (expand) - *terraform.nodeExpandOutput
+    aws_instance.alex_server (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.alex_server (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2023-01-25T14:09:21.536Z [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2023-01-25T14:09:21.536Z [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  aws_instance.alex_server (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.public_ip (expand) - *terraform.nodeExpandOutput
+    aws_instance.alex_server (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.alex_server (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    output.public_ip (expand) - *terraform.nodeExpandOutput
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2023-01-25T14:09:21.536Z [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2023-01-25T14:09:21.536Z [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  aws_instance.alex_server (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.public_ip (expand) - *terraform.nodeExpandOutput
+    aws_instance.alex_server (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.alex_server (expand) - *terraform.nodeExpandPlannableResource
+  root - *terraform.nodeCloseModule
+    output.public_ip (expand) - *terraform.nodeExpandOutput
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2023-01-25T14:09:21.536Z [DEBUG] Starting graph walk: walkPlan
+2023-01-25T14:09:21.536Z [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": starting visit (*terraform.NodeApplyableProvider)
+2023-01-25T14:09:21.537Z [DEBUG] created provider logger: level=trace
+2023-01-25T14:09:21.537Z [INFO]  provider: configuring client automatic mTLS
+2023-01-25T14:09:21.543Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/aws/4.49.0/windows_amd64/terraform-provider-aws_v4.49.0_x5.exe args=[.terraform/providers/registry.terraform.io/hashicorp/aws/4.49.0/windows_amd64/terraform-provider-aws_v4.49.0_x5.exe]
+2023-01-25T14:09:21.557Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/aws/4.49.0/windows_amd64/terraform-provider-aws_v4.49.0_x5.exe pid=7968
+2023-01-25T14:09:21.557Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/aws/4.49.0/windows_amd64/terraform-provider-aws_v4.49.0_x5.exe
+2023-01-25T14:09:21.732Z [INFO]  provider.terraform-provider-aws_v4.49.0_x5.exe: configuring server automatic mTLS: timestamp=2023-01-25T14:09:21.732Z
+2023-01-25T14:09:21.750Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: plugin address: address=127.0.0.1:10000 network=tcp timestamp=2023-01-25T14:09:21.750Z
+2023-01-25T14:09:21.750Z [DEBUG] provider: using plugin: version=5
+2023-01-25T14:09:21.761Z [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/aws\"]" provider for provider["registry.terraform.io/hashicorp/aws"]
+2023-01-25T14:09:21.761Z [TRACE] provider.stdio: waiting for stdio data
+2023-01-25T14:09:21.761Z [TRACE] NodeApplyableProvider: configuring provider["registry.terraform.io/hashicorp/aws"]
+2023-01-25T14:09:21.761Z [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/aws"]: using explicit config only
+2023-01-25T14:09:21.761Z [TRACE] GRPCProvider: GetProviderSchema
+2023-01-25T14:09:21.762Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Received request: tf_rpc=GetProviderSchema @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/tf5server/server.go:491 tf_provider_addr=registry.terraform.io/hashicorp/aws @module=sdk.proto tf_proto_version=5.3 tf_req_id=bd52650c-3d3d-7625-7aab-739da532d820 timestamp=2023-01-25T14:09:21.762Z
+2023-01-25T14:09:21.762Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Sending request downstream: tf_req_id=bd52650c-3d3d-7625-7aab-739da532d820 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_proto_version=5.3 tf_rpc=GetProviderSchema @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/internal/tf5serverlogging/downstream_request.go:17 @module=sdk.proto timestamp=2023-01-25T14:09:21.762Z
+2023-01-25T14:09:21.762Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: serving cached schema information: tf_rpc=GetProviderSchema @caller=github.com/hashicorp/terraform-plugin-mux@v0.8.0/internal/logging/mux.go:16 @module=sdk.mux timestamp=2023-01-25T14:09:21.762Z
+2023-01-25T14:09:21.762Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Received downstream response: @module=sdk.proto tf_proto_version=5.3 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=GetProviderSchema diagnostic_error_count=0 diagnostic_warning_count=0 tf_req_duration_ms=0 tf_req_id=bd52650c-3d3d-7625-7aab-739da532d820 @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/internal/tf5serverlogging/downstream_request.go:37 timestamp=2023-01-25T14:09:21.762Z
+2023-01-25T14:09:21.782Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Served request: tf_proto_version=5.3 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=GetProviderSchema @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/tf5server/server.go:510 @module=sdk.proto tf_req_id=bd52650c-3d3d-7625-7aab-739da532d820 timestamp=2023-01-25T14:09:21.781Z
+2023-01-25T14:09:21.894Z [TRACE] GRPCProvider: ValidateProviderConfig
+2023-01-25T14:09:21.895Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Received request: tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/tf5server/server.go:518 @module=sdk.proto tf_proto_version=5.3 tf_provider_addr=registry.terraform.io/hashicorp/aws timestamp=2023-01-25T14:09:21.895Z
+2023-01-25T14:09:21.895Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Skipping protocol data file writing because no data directory is set. Use the TF_LOG_SDK_PROTO_DATA_DIR environment variable to enable this functionality.: tf_rpc=PrepareProviderConfig @module=sdk.proto tf_proto_version=5.3 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/internal/logging/protocol_data.go:38 timestamp=2023-01-25T14:09:21.895Z
+2023-01-25T14:09:21.895Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Sending request downstream: @module=sdk.proto tf_proto_version=5.3 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/internal/tf5serverlogging/downstream_request.go:17 timestamp=2023-01-25T14:09:21.895Z
+2023-01-25T14:09:21.895Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: calling downstream server: @caller=github.com/hashicorp/terraform-plugin-mux@v0.8.0/internal/logging/mux.go:16 @module=sdk.mux tf_mux_provider=*schema.GRPCProviderServer tf_rpc=PrepareProviderConfig timestamp=2023-01-25T14:09:21.895Z
+2023-01-25T14:09:21.895Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Preparing provider configuration: @caller=github.com/hashicorp/terraform-plugin-sdk/v2@v2.24.1/helper/schema/grpc_provider.go:128 @module=sdk.helper_schema tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d tf_mux_provider=*schema.GRPCProviderServer tf_rpc=PrepareProviderConfig timestamp=2023-01-25T14:09:21.895Z
+2023-01-25T14:09:21.895Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling downstream: tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-sdk/v2@v2.24.1/helper/schema/grpc_provider.go:216 @module=sdk.helper_schema tf_mux_provider=*schema.GRPCProviderServer tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d timestamp=2023-01-25T14:09:21.895Z
+2023-01-25T14:09:21.918Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Called downstream: tf_provider_addr=registry.terraform.io/hashicorp/aws @caller=github.com/hashicorp/terraform-plugin-sdk/v2@v2.24.1/helper/schema/grpc_provider.go:218 @module=sdk.helper_schema tf_mux_provider=*schema.GRPCProviderServer tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d tf_rpc=PrepareProviderConfig timestamp=2023-01-25T14:09:21.918Z
+2023-01-25T14:09:21.918Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: calling downstream server: @module=sdk.mux tf_mux_provider=*proto5server.Server tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-mux@v0.8.0/internal/logging/mux.go:16 timestamp=2023-01-25T14:09:21.918Z
+2023-01-25T14:09:21.918Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Checking ProviderSchema lock: tf_mux_provider=*proto5server.Server @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwserver/server.go:261 @module=sdk.framework tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d tf_rpc=PrepareProviderConfig timestamp=2023-01-25T14:09:21.918Z
+2023-01-25T14:09:21.918Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Type implements TypeWithValidate: tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:77 @module=sdk.framework tf_attribute_path=allowed_account_ids tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws timestamp=2023-01-25T14:09:21.918Z
+2023-01-25T14:09:21.918Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling provider defined Type Validate: tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:78 tf_attribute_path=allowed_account_ids tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d @module=sdk.framework timestamp=2023-01-25T14:09:21.918Z
+2023-01-25T14:09:21.918Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Called provider defined Type Validate: tf_rpc=PrepareProviderConfig @module=sdk.framework tf_attribute_path=allowed_account_ids tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:80 timestamp=2023-01-25T14:09:21.918Z
+2023-01-25T14:09:21.918Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Type implements TypeWithValidate: @module=sdk.framework tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_attribute_path=forbidden_account_ids tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:77 timestamp=2023-01-25T14:09:21.918Z
+2023-01-25T14:09:21.918Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling provider defined Type Validate: @module=sdk.framework tf_attribute_path=forbidden_account_ids tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:78 tf_mux_provider=*proto5server.Server timestamp=2023-01-25T14:09:21.918Z
+2023-01-25T14:09:21.918Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Called provider defined Type Validate: tf_mux_provider=*proto5server.Server tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:80 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d @module=sdk.framework tf_attribute_path=forbidden_account_ids timestamp=2023-01-25T14:09:21.918Z
+2023-01-25T14:09:21.918Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Type implements TypeWithValidate: @module=sdk.framework tf_rpc=PrepareProviderConfig tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:77 tf_attribute_path=max_retries tf_mux_provider=*proto5server.Server timestamp=2023-01-25T14:09:21.918Z
+2023-01-25T14:09:21.919Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling provider defined Type Validate: @module=sdk.framework tf_attribute_path=max_retries tf_mux_provider=*proto5server.Server tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:78 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d timestamp=2023-01-25T14:09:21.918Z
+2023-01-25T14:09:21.919Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Called provider defined Type Validate: @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:80 tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d @module=sdk.framework tf_attribute_path=max_retries tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=PrepareProviderConfig timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Type implements TypeWithValidate: @module=sdk.framework tf_attribute_path=shared_credentials_files tf_provider_addr=registry.terraform.io/hashicorp/aws @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:77 tf_mux_provider=*proto5server.Server tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d tf_rpc=PrepareProviderConfig timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling provider defined Type Validate: tf_attribute_path=shared_credentials_files @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:78 @module=sdk.framework tf_rpc=PrepareProviderConfig tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Called provider defined Type Validate: @module=sdk.framework tf_attribute_path=shared_credentials_files tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:80 timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Type implements TypeWithValidate: @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:77 tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=PrepareProviderConfig @module=sdk.framework tf_attribute_path=shared_config_files tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling provider defined Type Validate: tf_mux_provider=*proto5server.Server tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:78 @module=sdk.framework tf_attribute_path=shared_config_files tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=PrepareProviderConfig timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Called provider defined Type Validate: tf_attribute_path=shared_config_files tf_provider_addr=registry.terraform.io/hashicorp/aws @module=sdk.framework tf_mux_provider=*proto5server.Server tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:80 timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Type implements TypeWithValidate: tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:77 @module=sdk.framework tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_attribute_path=shared_credentials_file tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling provider defined Type Validate: tf_attribute_path=shared_credentials_file tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d tf_rpc=PrepareProviderConfig @module=sdk.framework tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:78 timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Called provider defined Type Validate: tf_provider_addr=registry.terraform.io/hashicorp/aws @module=sdk.framework tf_mux_provider=*proto5server.Server tf_attribute_path=shared_credentials_file tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:80 timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling provider defined validator.List: @module=sdk.framework description="list must contain at most 1 elements" tf_mux_provider=*proto5server.Server tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwserver/block_validation.go:214 tf_attribute_path=shared_credentials_file tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=PrepareProviderConfig timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Called provider defined validator.List: tf_provider_addr=registry.terraform.io/hashicorp/aws @module=sdk.framework description="list must contain at most 1 elements" tf_attribute_path=shared_credentials_file @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwserver/block_validation.go:224 tf_mux_provider=*proto5server.Server tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d tf_rpc=PrepareProviderConfig timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Type implements TypeWithValidate: tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d tf_rpc=PrepareProviderConfig tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:77 @module=sdk.framework tf_attribute_path=shared_credentials_file timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling provider defined Type Validate: @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:78 @module=sdk.framework tf_attribute_path=shared_credentials_file tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d tf_rpc=PrepareProviderConfig timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Called provider defined Type Validate: tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d tf_rpc=PrepareProviderConfig tf_attribute_path=shared_credentials_file tf_mux_provider=*proto5server.Server @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:80 @module=sdk.framework timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling provider defined validator.List: @module=sdk.framework tf_mux_provider=*proto5server.Server @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwserver/block_validation.go:214 description="list must contain at most 1 elements" tf_attribute_path=shared_credentials_file tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d tf_rpc=PrepareProviderConfig timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Called provider defined validator.List: @module=sdk.framework description="list must contain at most 1 elements" tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwserver/block_validation.go:224 tf_attribute_path=shared_credentials_file tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Type implements TypeWithValidate: @module=sdk.framework tf_attribute_path=shared_credentials_file tf_mux_provider=*proto5server.Server tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:77 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling provider defined Type Validate: @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:78 tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d tf_rpc=PrepareProviderConfig @module=sdk.framework tf_attribute_path=shared_credentials_file tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Called provider defined Type Validate: tf_rpc=PrepareProviderConfig tf_provider_addr=registry.terraform.io/hashicorp/aws @module=sdk.framework tf_attribute_path=shared_credentials_file tf_mux_provider=*proto5server.Server tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:80 timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Type implements TypeWithValidate: tf_rpc=PrepareProviderConfig @module=sdk.framework tf_attribute_path=shared_credentials_file tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:77 timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling provider defined Type Validate: tf_attribute_path=shared_credentials_file tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:78 @module=sdk.framework tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Called provider defined Type Validate: tf_rpc=PrepareProviderConfig tf_attribute_path=shared_credentials_file tf_mux_provider=*proto5server.Server tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:80 @module=sdk.framework tf_provider_addr=registry.terraform.io/hashicorp/aws timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling provider defined validator.List: tf_attribute_path=shared_credentials_file tf_provider_addr=registry.terraform.io/hashicorp/aws @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwserver/block_validation.go:214 @module=sdk.framework tf_mux_provider=*proto5server.Server tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d tf_rpc=PrepareProviderConfig description="list must contain at most 1 elements" timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Called provider defined validator.List: tf_mux_provider=*proto5server.Server tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwserver/block_validation.go:224 @module=sdk.framework description="list must contain at most 1 elements" tf_attribute_path=shared_credentials_file tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Type implements TypeWithValidate: tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d tf_rpc=PrepareProviderConfig @module=sdk.framework tf_attribute_path=shared_credentials_file tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:77 timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling provider defined Type Validate: tf_provider_addr=registry.terraform.io/hashicorp/aws @module=sdk.framework tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:78 tf_attribute_path=shared_credentials_file tf_mux_provider=*proto5server.Server timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Called provider defined Type Validate: @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwschemadata/data_value.go:80 @module=sdk.framework tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_attribute_path=shared_credentials_file tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d tf_rpc=PrepareProviderConfig timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling provider defined validator.List: @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwserver/block_validation.go:214 @module=sdk.framework tf_attribute_path=shared_credentials_file tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d description="list must contain at most 1 elements" tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=PrepareProviderConfig timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Called provider defined validator.List: tf_mux_provider=*proto5server.Server tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwserver/block_validation.go:224 @module=sdk.framework description="list must contain at most 1 elements" tf_attribute_path=shared_credentials_file tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Received downstream response: @module=sdk.proto diagnostic_warning_count=0 tf_proto_version=5.3 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/internal/tf5serverlogging/downstream_request.go:37 diagnostic_error_count=0 tf_req_duration_ms=24 tf_rpc=PrepareProviderConfig timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.919Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Served request: tf_rpc=PrepareProviderConfig @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/tf5server/server.go:539 @module=sdk.proto tf_req_id=2592513e-f5e4-5e10-7152-6fe66fbafe8d tf_proto_version=5.3 tf_provider_addr=registry.terraform.io/hashicorp/aws timestamp=2023-01-25T14:09:21.919Z
+2023-01-25T14:09:21.920Z [TRACE] GRPCProvider: ConfigureProvider
+2023-01-25T14:09:21.920Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Received request: @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/tf5server/server.go:547 tf_proto_version=5.3 tf_req_id=210f4936-d836-f9a4-0154-d96a18ed8dd5 @module=sdk.proto tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=Configure timestamp=2023-01-25T14:09:21.920Z
+2023-01-25T14:09:21.920Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Sending request downstream: @module=sdk.proto tf_proto_version=5.3 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=Configure @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/internal/tf5serverlogging/downstream_request.go:17 tf_req_id=210f4936-d836-f9a4-0154-d96a18ed8dd5 timestamp=2023-01-25T14:09:21.920Z
+2023-01-25T14:09:21.921Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: calling downstream server: @module=sdk.mux tf_mux_provider=*schema.GRPCProviderServer tf_rpc=ConfigureProvider @caller=github.com/hashicorp/terraform-plugin-mux@v0.8.0/internal/logging/mux.go:16 timestamp=2023-01-25T14:09:21.920Z
+2023-01-25T14:09:21.921Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling downstream: tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=ConfigureProvider @caller=github.com/hashicorp/terraform-plugin-sdk/v2@v2.24.1/helper/schema/grpc_provider.go:556 @module=sdk.helper_schema tf_mux_provider=*schema.GRPCProviderServer tf_req_id=210f4936-d836-f9a4-0154-d96a18ed8dd5 timestamp=2023-01-25T14:09:21.921Z
+2023-01-25T14:09:21.921Z [INFO]  provider.terraform-provider-aws_v4.49.0_x5.exe: [INFO] Retrieved credentials from "SharedConfigCredentials: C:\\Users\\abishop1\\.aws\\credentials"
+2023-01-25T14:09:21.921Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: [DEBUG] Trying to get account information via sts:GetCallerIdentity
+2023-01-25T14:09:21.922Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: [DEBUG] [aws-sdk-go-v2] Request
+2023-01-25T14:09:21.922Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: POST / HTTP/1.1
+2023-01-25T14:09:21.922Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Host: sts.us-east-1.amazonaws.com
+2023-01-25T14:09:21.922Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.3.3 (+https://www.terraform.io) terraform-provider-aws/4.49.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.17.3 os/windows lang/go/1.19.3 md/GOOS/windows md/GOARCH/amd64 api/sts/1.17.7
+2023-01-25T14:09:21.922Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Content-Length: 43
+2023-01-25T14:09:21.922Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Amz-Sdk-Invocation-Id: 7abd763c-1283-4d65-a613-283d33cb8256
+2023-01-25T14:09:21.922Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Amz-Sdk-Request: attempt=1; max=25
+2023-01-25T14:09:21.922Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Authorization: AWS4-HMAC-SHA256 Credential=AKIA3GNHHC453FY7NVFI/20230125/us-east-1/sts/aws4_request, SignedHeaders=amz-sdk-invocation-id;amz-sdk-request;content-length;content-type;host;x-amz-date, Signature=dcb07c20131ee7f6af48f90535a1f91ec545dd86cce9208c1299bf1b7e8a723e
+2023-01-25T14:09:21.922Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Content-Type: application/x-www-form-urlencoded
+2023-01-25T14:09:21.922Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: X-Amz-Date: 20230125T140921Z
+2023-01-25T14:09:21.922Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Accept-Encoding: gzip
+2023-01-25T14:09:21.922Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: 
+2023-01-25T14:09:21.922Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Action=GetCallerIdentity&Version=2011-06-15
+2023-01-25T14:09:22.377Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: [DEBUG] [aws-sdk-go-v2] Response
+2023-01-25T14:09:22.377Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: HTTP/1.1 200 OK
+2023-01-25T14:09:22.377Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Content-Length: 401
+2023-01-25T14:09:22.377Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Content-Type: text/xml
+2023-01-25T14:09:22.377Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Date: Wed, 25 Jan 2023 14:09:23 GMT
+2023-01-25T14:09:22.377Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: X-Amzn-Requestid: 15304468-e051-414d-872d-a06bcd8bd0ef
+2023-01-25T14:09:22.377Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: 
+2023-01-25T14:09:22.377Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: <GetCallerIdentityResponse xmlns="https://sts.amazonaws.com/doc/2011-06-15/">
+2023-01-25T14:09:22.377Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe:   <GetCallerIdentityResult>
+2023-01-25T14:09:22.377Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe:     <Arn>arn:aws:iam::769686705979:user/Alex</Arn>
+2023-01-25T14:09:22.377Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe:     <UserId>AIDA3GNHHC455PFQW3KTM</UserId>
+2023-01-25T14:09:22.377Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe:     <Account>769686705979</Account>
+2023-01-25T14:09:22.377Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe:   </GetCallerIdentityResult>
+2023-01-25T14:09:22.377Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe:   <ResponseMetadata>
+2023-01-25T14:09:22.377Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe:     <RequestId>15304468-e051-414d-872d-a06bcd8bd0ef</RequestId>
+2023-01-25T14:09:22.377Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe:   </ResponseMetadata>
+2023-01-25T14:09:22.377Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: </GetCallerIdentityResponse>
+2023-01-25T14:09:22.377Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: [DEBUG] Trying to get account information via sts:GetCallerIdentity
+2023-01-25T14:09:22.378Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: [DEBUG] [aws-sdk-go-v2] Request
+2023-01-25T14:09:22.378Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: POST / HTTP/1.1
+2023-01-25T14:09:22.378Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Host: sts.us-east-1.amazonaws.com
+2023-01-25T14:09:22.378Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.3.3 (+https://www.terraform.io) terraform-provider-aws/4.49.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.17.3 os/windows lang/go/1.19.3 md/GOOS/windows md/GOARCH/amd64 api/sts/1.17.7
+2023-01-25T14:09:22.378Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Content-Length: 43
+2023-01-25T14:09:22.378Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Amz-Sdk-Invocation-Id: d623ac11-217e-4705-b751-c4246f245366
+2023-01-25T14:09:22.378Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Amz-Sdk-Request: attempt=1; max=25
+2023-01-25T14:09:22.378Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Authorization: AWS4-HMAC-SHA256 Credential=AKIA3GNHHC453FY7NVFI/20230125/us-east-1/sts/aws4_request, SignedHeaders=amz-sdk-invocation-id;amz-sdk-request;content-length;content-type;host;x-amz-date, Signature=48fd9789436d5535023c8d74f89134f6e06616e82b530e3c714a8c208eb47fee
+2023-01-25T14:09:22.378Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Content-Type: application/x-www-form-urlencoded
+2023-01-25T14:09:22.378Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: X-Amz-Date: 20230125T140922Z
+2023-01-25T14:09:22.378Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Accept-Encoding: gzip
+2023-01-25T14:09:22.378Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: 
+2023-01-25T14:09:22.378Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Action=GetCallerIdentity&Version=2011-06-15
+2023-01-25T14:09:22.473Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: [DEBUG] [aws-sdk-go-v2] Response
+2023-01-25T14:09:22.473Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: HTTP/1.1 200 OK
+2023-01-25T14:09:22.473Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Content-Length: 401
+2023-01-25T14:09:22.473Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Content-Type: text/xml
+2023-01-25T14:09:22.473Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Date: Wed, 25 Jan 2023 14:09:23 GMT
+2023-01-25T14:09:22.473Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: X-Amzn-Requestid: 57aac034-d9b9-4d60-b686-e4f04a979455
+2023-01-25T14:09:22.473Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: 
+2023-01-25T14:09:22.473Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: <GetCallerIdentityResponse xmlns="https://sts.amazonaws.com/doc/2011-06-15/">
+2023-01-25T14:09:22.473Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe:   <GetCallerIdentityResult>
+2023-01-25T14:09:22.473Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe:     <Arn>arn:aws:iam::769686705979:user/Alex</Arn>
+2023-01-25T14:09:22.473Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe:     <UserId>AIDA3GNHHC455PFQW3KTM</UserId>
+2023-01-25T14:09:22.473Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe:     <Account>769686705979</Account>
+2023-01-25T14:09:22.473Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe:   </GetCallerIdentityResult>
+2023-01-25T14:09:22.473Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe:   <ResponseMetadata>
+2023-01-25T14:09:22.473Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe:     <RequestId>57aac034-d9b9-4d60-b686-e4f04a979455</RequestId>
+2023-01-25T14:09:22.473Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe:   </ResponseMetadata>
+2023-01-25T14:09:22.473Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: </GetCallerIdentityResponse>
+2023-01-25T14:09:22.476Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Called downstream: tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=210f4936-d836-f9a4-0154-d96a18ed8dd5 @caller=github.com/hashicorp/terraform-plugin-sdk/v2@v2.24.1/helper/schema/grpc_provider.go:558 @module=sdk.helper_schema tf_mux_provider=*schema.GRPCProviderServer tf_rpc=ConfigureProvider timestamp=2023-01-25T14:09:22.476Z
+2023-01-25T14:09:22.476Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: calling downstream server: @module=sdk.mux tf_mux_provider=*proto5server.Server tf_rpc=ConfigureProvider @caller=github.com/hashicorp/terraform-plugin-mux@v0.8.0/internal/logging/mux.go:16 timestamp=2023-01-25T14:09:22.476Z
+2023-01-25T14:09:22.476Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Checking ProviderSchema lock: tf_mux_provider=*proto5server.Server tf_req_id=210f4936-d836-f9a4-0154-d96a18ed8dd5 @module=sdk.framework @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwserver/server.go:261 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=ConfigureProvider timestamp=2023-01-25T14:09:22.476Z
+2023-01-25T14:09:22.477Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling provider defined Provider Configure: tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwserver/server_configureprovider.go:12 @module=sdk.framework tf_req_id=210f4936-d836-f9a4-0154-d96a18ed8dd5 tf_rpc=ConfigureProvider timestamp=2023-01-25T14:09:22.476Z
+2023-01-25T14:09:22.477Z [DEBUG] provider.terraform-provider-aws_v4.49.0_x5.exe: Called provider defined Provider Configure: tf_mux_provider=*proto5server.Server tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=210f4936-d836-f9a4-0154-d96a18ed8dd5 tf_rpc=ConfigureProvider @caller=github.com/hashicorp/terraform-plugin-framework@v1.0.1/internal/fwserver/server_configureprovider.go:20 @module=sdk.framework timestamp=2023-01-25T14:09:22.476Z
+2023-01-25T14:09:22.477Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Received downstream response: diagnostic_error_count=0 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=Configure @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/internal/tf5serverlogging/downstream_request.go:37 tf_proto_version=5.3 tf_req_duration_ms=555 tf_req_id=210f4936-d836-f9a4-0154-d96a18ed8dd5 @module=sdk.proto diagnostic_warning_count=0 timestamp=2023-01-25T14:09:22.476Z
+2023-01-25T14:09:22.477Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Served request: @module=sdk.proto tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=Configure tf_proto_version=5.3 tf_req_id=210f4936-d836-f9a4-0154-d96a18ed8dd5 @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/tf5server/server.go:567 timestamp=2023-01-25T14:09:22.476Z
+2023-01-25T14:09:22.477Z [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": visit complete
+2023-01-25T14:09:22.477Z [TRACE] vertex "aws_instance.alex_server (expand)": starting visit (*terraform.nodeExpandPlannableResource)
+2023-01-25T14:09:22.477Z [TRACE] vertex "aws_instance.alex_server (expand)": expanding dynamic subgraph
+2023-01-25T14:09:22.477Z [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2023-01-25T14:09:22.477Z [TRACE] ResourceCountTransformer: adding aws_instance.alex_server as *terraform.NodePlannableResourceInstance
+2023-01-25T14:09:22.477Z [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  aws_instance.alex_server - *terraform.NodePlannableResourceInstance
+  ------
+2023-01-25T14:09:22.477Z [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2023-01-25T14:09:22.477Z [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2023-01-25T14:09:22.477Z [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2023-01-25T14:09:22.477Z [DEBUG] Resource instance state not found for node "aws_instance.alex_server", instance aws_instance.alex_server
+2023-01-25T14:09:22.477Z [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2023-01-25T14:09:22.477Z [TRACE] Executing graph transform *terraform.TargetsTransformer
+2023-01-25T14:09:22.477Z [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2023-01-25T14:09:22.477Z [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2023-01-25T14:09:22.477Z [DEBUG] ReferenceTransformer: "aws_instance.alex_server" references: []
+2023-01-25T14:09:22.477Z [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2023-01-25T14:09:22.477Z [TRACE] Executing graph transform *terraform.RootTransformer
+2023-01-25T14:09:22.477Z [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2023-01-25T14:09:22.477Z [TRACE] vertex "aws_instance.alex_server (expand)": entering dynamic subgraph
+2023-01-25T14:09:22.477Z [TRACE] vertex "aws_instance.alex_server": starting visit (*terraform.NodePlannableResourceInstance)
+2023-01-25T14:09:22.477Z [TRACE] readResourceInstanceState: reading state for aws_instance.alex_server
+2023-01-25T14:09:22.477Z [TRACE] readResourceInstanceState: no state present for aws_instance.alex_server
+2023-01-25T14:09:22.477Z [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState to prevRunState for aws_instance.alex_server
+2023-01-25T14:09:22.477Z [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState: removing state object for aws_instance.alex_server
+2023-01-25T14:09:22.477Z [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState to refreshState for aws_instance.alex_server
+2023-01-25T14:09:22.477Z [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState: removing state object for aws_instance.alex_server
+2023-01-25T14:09:22.477Z [TRACE] NodeAbstractResourceInstance.refresh for aws_instance.alex_server
+2023-01-25T14:09:22.477Z [DEBUG] refresh: aws_instance.alex_server: no state, so not refreshing
+2023-01-25T14:09:22.477Z [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState to refreshState for aws_instance.alex_server
+2023-01-25T14:09:22.477Z [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState: removing state object for aws_instance.alex_server
+2023-01-25T14:09:22.477Z [TRACE] Re-validating config for "aws_instance.alex_server"
+2023-01-25T14:09:22.477Z [TRACE] GRPCProvider: ValidateResourceConfig
+2023-01-25T14:09:22.478Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Received request: @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/tf5server/server.go:679 tf_proto_version=5.3 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_resource_type=aws_instance tf_rpc=ValidateResourceTypeConfig @module=sdk.proto tf_req_id=b2b0f316-7afe-56b7-a34f-ef6e7bbd9d38 timestamp=2023-01-25T14:09:22.478Z
+2023-01-25T14:09:22.478Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Sending request downstream: tf_resource_type=aws_instance @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/internal/tf5serverlogging/downstream_request.go:17 @module=sdk.proto tf_proto_version=5.3 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=b2b0f316-7afe-56b7-a34f-ef6e7bbd9d38 tf_rpc=ValidateResourceTypeConfig timestamp=2023-01-25T14:09:22.478Z
+2023-01-25T14:09:22.478Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: calling downstream server: tf_mux_provider=*schema.GRPCProviderServer tf_rpc=ValidateResourceTypeConfig @caller=github.com/hashicorp/terraform-plugin-mux@v0.8.0/internal/logging/mux.go:16 @module=sdk.mux timestamp=2023-01-25T14:09:22.478Z
+2023-01-25T14:09:22.478Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling downstream: tf_rpc=ValidateResourceTypeConfig @module=sdk.helper_schema tf_mux_provider=*schema.GRPCProviderServer tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=b2b0f316-7afe-56b7-a34f-ef6e7bbd9d38 @caller=github.com/hashicorp/terraform-plugin-sdk/v2@v2.24.1/helper/schema/grpc_provider.go:245 tf_resource_type=aws_instance timestamp=2023-01-25T14:09:22.478Z
+2023-01-25T14:09:22.478Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Called downstream: tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=b2b0f316-7afe-56b7-a34f-ef6e7bbd9d38 @caller=github.com/hashicorp/terraform-plugin-sdk/v2@v2.24.1/helper/schema/grpc_provider.go:247 @module=sdk.helper_schema tf_mux_provider=*schema.GRPCProviderServer tf_resource_type=aws_instance tf_rpc=ValidateResourceTypeConfig timestamp=2023-01-25T14:09:22.478Z
+2023-01-25T14:09:22.478Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Received downstream response: @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/internal/tf5serverlogging/downstream_request.go:37 diagnostic_error_count=0 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_resource_type=aws_instance diagnostic_warning_count=0 tf_proto_version=5.3 tf_req_duration_ms=0 tf_req_id=b2b0f316-7afe-56b7-a34f-ef6e7bbd9d38 @module=sdk.proto tf_rpc=ValidateResourceTypeConfig timestamp=2023-01-25T14:09:22.478Z
+2023-01-25T14:09:22.478Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Served request: tf_proto_version=5.3 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_rpc=ValidateResourceTypeConfig @module=sdk.proto tf_req_id=b2b0f316-7afe-56b7-a34f-ef6e7bbd9d38 tf_resource_type=aws_instance @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/tf5server/server.go:699 timestamp=2023-01-25T14:09:22.478Z
+2023-01-25T14:09:22.479Z [TRACE] GRPCProvider: PlanResourceChange
+2023-01-25T14:09:22.479Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Received request: @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/tf5server/server.go:770 tf_rpc=PlanResourceChange tf_proto_version=5.3 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=59f6fed6-fff7-289a-29ce-891d222af45c tf_resource_type=aws_instance @module=sdk.proto timestamp=2023-01-25T14:09:22.479Z
+2023-01-25T14:09:22.479Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Sending request downstream: @module=sdk.proto tf_proto_version=5.3 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_resource_type=aws_instance tf_rpc=PlanResourceChange @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/internal/tf5serverlogging/downstream_request.go:17 tf_req_id=59f6fed6-fff7-289a-29ce-891d222af45c timestamp=2023-01-25T14:09:22.479Z
+2023-01-25T14:09:22.479Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: calling downstream server: @module=sdk.mux tf_mux_provider=*schema.GRPCProviderServer tf_rpc=PlanResourceChange @caller=github.com/hashicorp/terraform-plugin-mux@v0.8.0/internal/logging/mux.go:16 timestamp=2023-01-25T14:09:22.479Z
+2023-01-25T14:09:22.483Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Calling downstream: tf_rpc=PlanResourceChange @caller=github.com/hashicorp/terraform-plugin-sdk/v2@v2.24.1/helper/schema/schema.go:698 @module=sdk.helper_schema tf_mux_provider=*schema.GRPCProviderServer tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=59f6fed6-fff7-289a-29ce-891d222af45c tf_resource_type=aws_instance timestamp=2023-01-25T14:09:22.482Z
+2023-01-25T14:09:22.483Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Called downstream: tf_mux_provider=*schema.GRPCProviderServer tf_provider_addr=registry.terraform.io/hashicorp/aws tf_resource_type=aws_instance @caller=github.com/hashicorp/terraform-plugin-sdk/v2@v2.24.1/helper/schema/schema.go:700 @module=sdk.helper_schema tf_req_id=59f6fed6-fff7-289a-29ce-891d222af45c tf_rpc=PlanResourceChange timestamp=2023-01-25T14:09:22.482Z
+2023-01-25T14:09:22.483Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Received downstream response: @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/internal/tf5serverlogging/downstream_request.go:37 @module=sdk.proto diagnostic_error_count=0 diagnostic_warning_count=0 tf_resource_type=aws_instance tf_rpc=PlanResourceChange tf_proto_version=5.3 tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_duration_ms=3 tf_req_id=59f6fed6-fff7-289a-29ce-891d222af45c timestamp=2023-01-25T14:09:22.483Z
+2023-01-25T14:09:22.483Z [TRACE] provider.terraform-provider-aws_v4.49.0_x5.exe: Served request: tf_provider_addr=registry.terraform.io/hashicorp/aws tf_req_id=59f6fed6-fff7-289a-29ce-891d222af45c tf_resource_type=aws_instance tf_rpc=PlanResourceChange @caller=github.com/hashicorp/terraform-plugin-go@v0.14.2/tfprotov5/tf5server/server.go:796 @module=sdk.proto tf_proto_version=5.3 timestamp=2023-01-25T14:09:22.483Z
+2023-01-25T14:09:22.484Z [WARN]  Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_instance.alex_server, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .source_dest_check: planned value cty.True for a non-computed attribute
+      - .user_data_replace_on_change: planned value cty.False for a non-computed attribute
+      - .get_password_data: planned value cty.False for a non-computed attribute
+      - .capacity_reservation_specification: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .ebs_block_device: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .ephemeral_block_device: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .maintenance_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .network_interface: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .enclave_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .metadata_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .private_dns_name_options: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .root_block_device: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+2023-01-25T14:09:22.484Z [TRACE] writeChange: recorded Create change for aws_instance.alex_server
+2023-01-25T14:09:22.484Z [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState to workingState for aws_instance.alex_server
+2023-01-25T14:09:22.484Z [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState: writing state object for aws_instance.alex_server
+2023-01-25T14:09:22.484Z [TRACE] vertex "aws_instance.alex_server": visit complete
+2023-01-25T14:09:22.484Z [TRACE] vertex "aws_instance.alex_server (expand)": dynamic subgraph completed successfully
+2023-01-25T14:09:22.484Z [TRACE] vertex "aws_instance.alex_server (expand)": visit complete
+2023-01-25T14:09:22.484Z [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2023-01-25T14:09:22.484Z [TRACE] GRPCProvider: Close
+2023-01-25T14:09:22.484Z [TRACE] vertex "output.public_ip (expand)": starting visit (*terraform.nodeExpandOutput)
+2023-01-25T14:09:22.484Z [TRACE] vertex "output.public_ip (expand)": expanding dynamic subgraph
+2023-01-25T14:09:22.484Z [TRACE] Expanding output: adding output.public_ip as *terraform.NodeApplyableOutput
+2023-01-25T14:09:22.484Z [TRACE] vertex "output.public_ip (expand)": entering dynamic subgraph
+2023-01-25T14:09:22.484Z [TRACE] vertex "output.public_ip": starting visit (*terraform.NodeApplyableOutput)
+2023-01-25T14:09:22.484Z [TRACE] setValue: Saving Create change for output.public_ip in changeset
+2023-01-25T14:09:22.484Z [TRACE] setValue: Saving value for output.public_ip in state
+2023-01-25T14:09:22.485Z [TRACE] vertex "output.public_ip": visit complete
+2023-01-25T14:09:22.485Z [TRACE] vertex "output.public_ip (expand)": dynamic subgraph completed successfully
+2023-01-25T14:09:22.485Z [TRACE] vertex "output.public_ip (expand)": visit complete
+2023-01-25T14:09:22.485Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2023-01-25T14:09:22.508Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/4.49.0/windows_amd64/terraform-provider-aws_v4.49.0_x5.exe pid=7968
+2023-01-25T14:09:22.508Z [DEBUG] provider: plugin exited
+2023-01-25T14:09:22.508Z [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": visit complete
+2023-01-25T14:09:22.508Z [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2023-01-25T14:09:22.508Z [TRACE] vertex "root": visit complete
+2023-01-25T14:09:22.508Z [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/hashicorp/aws"
+2023-01-25T14:09:22.508Z [DEBUG] building apply graph to check for errors
+2023-01-25T14:09:22.508Z [TRACE] Executing graph transform *terraform.ConfigTransformer
+2023-01-25T14:09:22.508Z [TRACE] ConfigTransformer: Starting for path:
+2023-01-25T14:09:22.508Z [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  aws_instance.alex_server (expand) - *terraform.nodeExpandApplyableResource
+  ------
+2023-01-25T14:09:22.508Z [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2023-01-25T14:09:22.508Z [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2023-01-25T14:09:22.508Z [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2023-01-25T14:09:22.508Z [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2023-01-25T14:09:22.508Z [TRACE] Executing graph transform *terraform.LocalTransformer
+2023-01-25T14:09:22.508Z [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2023-01-25T14:09:22.508Z [TRACE] Executing graph transform *terraform.OutputTransformer
+2023-01-25T14:09:22.508Z [TRACE] OutputTransformer: adding public_ip as *terraform.nodeExpandOutput
+2023-01-25T14:09:22.508Z [TRACE] Completed graph transform *terraform.OutputTransformer with new graph:
+  aws_instance.alex_server (expand) - *terraform.nodeExpandApplyableResource
+  output.public_ip (expand) - *terraform.nodeExpandOutput
+  ------
+2023-01-25T14:09:22.508Z [TRACE] Executing graph transform *terraform.DiffTransformer
+2023-01-25T14:09:22.508Z [TRACE] DiffTransformer starting
+2023-01-25T14:09:22.508Z [TRACE] DiffTransformer: found Create change for aws_instance.alex_server
+2023-01-25T14:09:22.508Z [TRACE] DiffTransformer: aws_instance.alex_server will be represented by aws_instance.alex_server
+2023-01-25T14:09:22.509Z [TRACE] DiffTransformer complete
+2023-01-25T14:09:22.509Z [TRACE] Completed graph transform *terraform.DiffTransformer with new graph:
+  aws_instance.alex_server - *terraform.NodeApplyableResourceInstance
+    aws_instance.alex_server (expand) - *terraform.nodeExpandApplyableResource
+  aws_instance.alex_server (expand) - *terraform.nodeExpandApplyableResource
+  output.public_ip (expand) - *terraform.nodeExpandOutput
+  ------
+2023-01-25T14:09:22.509Z [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2023-01-25T14:09:22.509Z [DEBUG] Resource state not found for node "aws_instance.alex_server", instance aws_instance.alex_server
+2023-01-25T14:09:22.509Z [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2023-01-25T14:09:22.509Z [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2023-01-25T14:09:22.509Z [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2023-01-25T14:09:22.509Z [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2023-01-25T14:09:22.509Z [TRACE] AttachResourceConfigTransformer: attaching to "aws_instance.alex_server" (*terraform.NodeApplyableResourceInstance) config from main.tf:14,1-38
+2023-01-25T14:09:22.509Z [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_instance.alex_server
+2023-01-25T14:09:22.509Z [TRACE] AttachResourceConfigTransformer: attaching to "aws_instance.alex_server (expand)" (*terraform.nodeExpandApplyableResource) config from main.tf:14,1-38
+2023-01-25T14:09:22.509Z [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_instance.alex_server (expand)
+2023-01-25T14:09:22.509Z [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2023-01-25T14:09:22.509Z [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2023-01-25T14:09:22.509Z [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2023-01-25T14:09:22.509Z [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/aws\"]" provider configuration from main.tf:9,1-15
+2023-01-25T14:09:22.509Z [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  aws_instance.alex_server - *terraform.NodeApplyableResourceInstance
+    aws_instance.alex_server (expand) - *terraform.nodeExpandApplyableResource
+  aws_instance.alex_server (expand) - *terraform.nodeExpandApplyableResource
+  output.public_ip (expand) - *terraform.nodeExpandOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2023-01-25T14:09:22.509Z [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2023-01-25T14:09:22.509Z [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2023-01-25T14:09:22.509Z [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2023-01-25T14:09:22.509Z [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_instance.alex_server (expand)
+2023-01-25T14:09:22.509Z [DEBUG] ProviderTransformer: "aws_instance.alex_server (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2023-01-25T14:09:22.509Z [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_instance.alex_server
+2023-01-25T14:09:22.509Z [DEBUG] ProviderTransformer: "aws_instance.alex_server" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"]
+2023-01-25T14:09:22.509Z [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  aws_instance.alex_server - *terraform.NodeApplyableResourceInstance
+    aws_instance.alex_server (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.alex_server (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.public_ip (expand) - *terraform.nodeExpandOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2023-01-25T14:09:22.509Z [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2023-01-25T14:09:22.509Z [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2023-01-25T14:09:22.509Z [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  aws_instance.alex_server - *terraform.NodeApplyableResourceInstance
+    aws_instance.alex_server (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.alex_server (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.public_ip (expand) - *terraform.nodeExpandOutput
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2023-01-25T14:09:22.509Z [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2023-01-25T14:09:22.509Z [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2023-01-25T14:09:22.509Z [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2023-01-25T14:09:22.509Z [TRACE] AttachSchemaTransformer: attaching resource schema to aws_instance.alex_server
+2023-01-25T14:09:22.509Z [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/aws"]
+2023-01-25T14:09:22.509Z [TRACE] AttachSchemaTransformer: attaching resource schema to aws_instance.alex_server (expand)
+2023-01-25T14:09:22.509Z [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2023-01-25T14:09:22.509Z [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2023-01-25T14:09:22.509Z [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2023-01-25T14:09:22.509Z [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2023-01-25T14:09:22.509Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: []
+2023-01-25T14:09:22.509Z [DEBUG] ReferenceTransformer: "aws_instance.alex_server (expand)" references: []
+2023-01-25T14:09:22.509Z [DEBUG] ReferenceTransformer: "output.public_ip (expand)" references: [aws_instance.alex_server (expand) aws_instance.alex_server aws_instance.alex_server]
+2023-01-25T14:09:22.509Z [DEBUG] ReferenceTransformer: "aws_instance.alex_server" references: []
+2023-01-25T14:09:22.509Z [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  aws_instance.alex_server - *terraform.NodeApplyableResourceInstance
+    aws_instance.alex_server (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.alex_server (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.public_ip (expand) - *terraform.nodeExpandOutput
+    aws_instance.alex_server - *terraform.NodeApplyableResourceInstance
+    aws_instance.alex_server (expand) - *terraform.nodeExpandApplyableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2023-01-25T14:09:22.509Z [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2023-01-25T14:09:22.509Z [TRACE] AttachDependenciesTransformer: aws_instance.alex_server depends on []
+2023-01-25T14:09:22.509Z [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2023-01-25T14:09:22.509Z [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2023-01-25T14:09:22.509Z [TRACE] ForcedCBDTransformer: "aws_instance.alex_server" (*terraform.NodeApplyableResourceInstance) has no CBD descendent, so skipping
+2023-01-25T14:09:22.509Z [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2023-01-25T14:09:22.509Z [TRACE] Executing graph transform *terraform.DestroyEdgeTransformer
+2023-01-25T14:09:22.509Z [TRACE] Completed graph transform *terraform.DestroyEdgeTransformer (no changes)
+2023-01-25T14:09:22.509Z [TRACE] Executing graph transform *terraform.CBDEdgeTransformer
+2023-01-25T14:09:22.509Z [TRACE] Completed graph transform *terraform.CBDEdgeTransformer (no changes)
+2023-01-25T14:09:22.509Z [TRACE] Executing graph transform *terraform.pruneUnusedNodesTransformer
+2023-01-25T14:09:22.509Z [TRACE] Completed graph transform *terraform.pruneUnusedNodesTransformer (no changes)
+2023-01-25T14:09:22.509Z [TRACE] Executing graph transform *terraform.TargetsTransformer
+2023-01-25T14:09:22.509Z [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2023-01-25T14:09:22.509Z [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2023-01-25T14:09:22.509Z [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  aws_instance.alex_server - *terraform.NodeApplyableResourceInstance
+    aws_instance.alex_server (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.alex_server (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.public_ip (expand) - *terraform.nodeExpandOutput
+    aws_instance.alex_server - *terraform.NodeApplyableResourceInstance
+    aws_instance.alex_server (expand) - *terraform.nodeExpandApplyableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.alex_server - *terraform.NodeApplyableResourceInstance
+    aws_instance.alex_server (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2023-01-25T14:09:22.509Z [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2023-01-25T14:09:22.509Z [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  aws_instance.alex_server - *terraform.NodeApplyableResourceInstance
+    aws_instance.alex_server (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.alex_server (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.public_ip (expand) - *terraform.nodeExpandOutput
+    aws_instance.alex_server - *terraform.NodeApplyableResourceInstance
+    aws_instance.alex_server (expand) - *terraform.nodeExpandApplyableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.alex_server - *terraform.NodeApplyableResourceInstance
+    aws_instance.alex_server (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    output.public_ip (expand) - *terraform.nodeExpandOutput
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2023-01-25T14:09:22.509Z [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2023-01-25T14:09:22.509Z [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  aws_instance.alex_server - *terraform.NodeApplyableResourceInstance
+    aws_instance.alex_server (expand) - *terraform.nodeExpandApplyableResource
+  aws_instance.alex_server (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  output.public_ip (expand) - *terraform.nodeExpandOutput
+    aws_instance.alex_server - *terraform.NodeApplyableResourceInstance
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.alex_server - *terraform.NodeApplyableResourceInstance
+  root - *terraform.nodeCloseModule
+    output.public_ip (expand) - *terraform.nodeExpandOutput
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2023-01-25T14:09:22.528Z [DEBUG] command: asking for input: "\nDo you want to perform these actions?"
+2023-01-25T14:09:47.492Z [TRACE] statemgr.Filesystem: removing lock metadata file .terraform.tfstate.lock.info
+2023-01-25T14:09:47.494Z [TRACE] statemgr.Filesystem: unlocked by closing terraform.tfstate
