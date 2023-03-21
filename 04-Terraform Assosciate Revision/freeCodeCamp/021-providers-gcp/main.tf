@@ -8,8 +8,8 @@ terraform {
 }
 
 provider "google" {
-  credentials = "inspired-berm-329115-4919205a40d8.json"
-  project = "inspired-berm-329115"
+  credentials = ".json"
+  project = ""
   region = "us-central1"
   zone = "us-central1-c"
 }
